@@ -1,0 +1,8 @@
+<section class="book">
+  <div class="book__cover">{{ site.book.cover_title | strip | newline_to_br }}</div>
+  <div>
+    <h2>{{ site.book.heading }}</h2>
+    <p>{{ site.book.body }}</p>
+    <a class="btn" href="{{ site.book.cta_url | relative_url }}">{{ site.book.cta_text }}</a>
+  </div>
+</section>

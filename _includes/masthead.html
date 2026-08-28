@@ -1,0 +1,20 @@
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      {% include logo.svg %}
+      <span>
+        <b>{{ site.title }}</b>
+        <span>{{ site.tagline }}</span>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Topics">
+      {%- assign pillars = site.pillars | sort: 'order' -%}
+      {%- for pillar in pillars %}
+      <a href="{{ pillar.url | relative_url }}">{{ pillar.nav_title | default: pillar.title }}</a>
+      {%- endfor %}
+      {%- for item in site.nav.extra %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</header>

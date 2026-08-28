@@ -1,0 +1,20 @@
+<section class="ledger">
+  <h2>{{ site.ledger.heading }}</h2>
+  <p class="sub">{{ site.ledger.sub }}</p>
+
+  {%- for item in site.ledger.questions %}
+  <a class="qrow" href="{{ item.url | relative_url }}">
+    <span class="ref">{{ item.ref }}</span>
+    <q>{{ item.question }} <span class="arrow" aria-hidden="true">&rarr;</span></q>
+  </a>
+  {%- endfor %}
+
+  <div class="howto">
+    <span class="label">{{ site.howto.label }}</span>
+    <blockquote class="howto__demo">
+      <strong>{{ site.howto.demo_label }}</strong>
+      <p>{{ site.howto.demo }}</p>
+    </blockquote>
+    <p>{{ site.howto.note }}</p>
+  </div>
+</section>

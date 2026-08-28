@@ -1,0 +1,144 @@
+# ---------------------------------------------------------------------------
+# Stewardship Journeys — site configuration
+# All homepage copy lives here or in the _pillars collection. Templates in
+# _layouts/ and _includes/ read from this file; none of it is hard-coded.
+# ---------------------------------------------------------------------------
+
+title: Stewardship Journeys
+tagline: Money questions, answered from Scripture
+description: >-
+  Plain answers to the money questions Christians actually ask, drawn from
+  Scripture, with the passages shown and the disagreements named honestly.
+
+url: "https://stewardshipjourneys.com"
+# Serving as a GitHub Pages *project* site (username.github.io/stewardship-blog)
+# requires the baseurl below. Clear it to "" when the custom domain is attached.
+baseurl: "/stewardship-blog"
+
+lang: en
+
+collections:
+  pillars:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: pillars
+    values:
+      layout: pillar
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# ---------------------------------------------------------------------------
+# Masthead
+# ---------------------------------------------------------------------------
+nav:
+  # Topic links are generated from the _pillars collection.
+  # Anything listed here is appended after them.
+  extra:
+    - title: About
+      url: /about/
+
+# ---------------------------------------------------------------------------
+# Hero
+# ---------------------------------------------------------------------------
+hero:
+  label: Biblical wisdom · practical money
+  heading: Most people arrive here carrying one question.
+  # Inline HTML is allowed in these strings; <em> renders in the brass accent.
+  body: >-
+    Plain answers to the money questions Christians actually ask — the ones
+    that are hard to say out loud at church. Every page gives the answer first,
+    shows the passages it rests on, and says honestly <em>where believers
+    disagree</em>.
+
+# ---------------------------------------------------------------------------
+# Question ledger
+# ---------------------------------------------------------------------------
+ledger:
+  heading: Start with what you came for
+  sub: Six questions people ask most. Each opens to a full answer.
+  questions:
+    - ref: 1 Timothy 6:10
+      question: Is money the root of all evil?
+      url: /tithing-giving/
+    - ref: 2 Corinthians 8:12
+      question: Can I stop tithing while I pay off debt?
+      url: /tithing-giving/
+    - ref: Proverbs 3:9
+      question: Do I tithe on gross or net income?
+      url: /tithing-giving/
+    - ref: Proverbs 22:7
+      question: Is it a sin to be in debt?
+      url: /debt-borrowing/
+    - ref: Proverbs 6:6–8
+      question: Is saving money a lack of faith?
+      url: /budgeting-saving/
+    - ref: Philippians 4:6
+      question: Is it a sin to worry about money?
+      url: /anxiety-provision/
+
+# The "how every answer is built" explainer beneath the ledger
+howto:
+  label: How every answer is built
+  demo_label: Short answer
+  demo: >-
+    No. The verse people are remembering is 1 Timothy 6:10, and it says the
+    <em>love</em> of money is <em>a</em> root of <em>all kinds</em> of evil.
+  note: >-
+    The answer comes first, in full, before any explanation — so you get what
+    you needed in ten seconds, and so search engines and AI assistants can
+    quote it accurately.
+
+# ---------------------------------------------------------------------------
+# Topic grid heading (the six cards come from _pillars)
+# ---------------------------------------------------------------------------
+topics:
+  heading: Six topics
+
+# ---------------------------------------------------------------------------
+# Book panel
+# ---------------------------------------------------------------------------
+book:
+  cover_title: |-
+    Financial Freedom
+    Through
+    Godly Stewardship
+  heading: These pages answer one question. The book walks the whole path.
+  body: >-
+    Three steps, twelve chapters, with reflection questions and a devotional
+    prayer at the end of each. 181 pages, paperback and Kindle.
+  cta_text: About the book
+  cta_url: /book/
+
+# ---------------------------------------------------------------------------
+# Email capture
+# ---------------------------------------------------------------------------
+capture:
+  heading: The Stewardship Scripture Index
+  body: >-
+    Every passage on money in Scripture, sorted by what you're facing — debt,
+    giving, worry, provision, work. Free, one page, no sign-in to read it.
+  placeholder: you@example.com
+  button: Send me the index
+  # Paste the form endpoint from your email provider here. While it is blank
+  # the form renders disabled rather than posting nowhere.
+  action: ""
+
+# ---------------------------------------------------------------------------
+# Footer
+# ---------------------------------------------------------------------------
+author: Rowan Rivers
+footer_notes:
+  - Written by Rowan Rivers, author of <em>Financial Freedom Through Godly Stewardship</em>.
+  - Scripture quotations are from the World English Bible, which is in the public domain.
+  - >-
+    This site explains what Scripture says about money. It is not financial,
+    legal, or tax advice, and it is not a substitute for a licensed
+    professional who knows your situation.

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section class="pagehead">
+  <div class="wrap">
+    <p class="label">Topic {{ page.order | prepend: '0' | slice: -2, 2 }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="pagehead__blurb">{{ page.blurb }}</p>
+  </div>
+</section>
+
+<main class="wrap prose">
+  {{ content }}
+</main>

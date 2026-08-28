@@ -1,0 +1,22 @@
+<section class="capture">
+  <div class="capture__box">
+    <h2>{{ site.capture.heading }}</h2>
+    <p>{{ site.capture.body }}</p>
+    {%- if site.capture.action and site.capture.action != '' %}
+    <form action="{{ site.capture.action }}" method="post">
+      <input type="email" name="email" required
+             placeholder="{{ site.capture.placeholder }}" aria-label="Email address">
+      <button type="submit">{{ site.capture.button }}</button>
+    </form>
+    {%- else %}
+    <form class="is-inert" aria-describedby="capture-note" onsubmit="return false">
+      <input type="email" placeholder="{{ site.capture.placeholder }}"
+             aria-label="Email address" disabled>
+      <button type="submit" disabled>{{ site.capture.button }}</button>
+    </form>
+    <p id="capture-note" class="capture__note">
+      Set <code>capture.action</code> in <code>_config.yml</code> to activate this form.
+    </p>
+    {%- endif %}
+  </div>
+</section>
