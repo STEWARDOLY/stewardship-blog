@@ -1,14 +1,17 @@
 <section class="topics">
-  <h2>{{ site.topics.heading }}</h2>
-  <div class="rail">
-    {%- assign pillars = site.pillars | sort: 'order' -%}
-    {%- for pillar in pillars %}
-    <a class="card" href="{{ pillar.url | relative_url }}">
-      <span class="num">{{ pillar.order | prepend: '0' | slice: -2, 2 }}</span>
-      <h3>{{ pillar.title }}</h3>
-      <p>{{ pillar.blurb }}</p>
-      <span class="cue">{{ pillar.question_count }} questions <span aria-hidden="true">&rarr;</span></span>
-    </a>
-    {%- endfor %}
+  <div class="wrap">
+    <h2>{{ site.topics.heading }}</h2>
+    <p class="sub">{{ site.topics.sub }}</p>
+    <div class="rail">
+      {%- assign pillars = site.pillars | sort: 'order' -%}
+      {%- for pillar in pillars %}
+      <a class="card" href="{{ pillar.url | relative_url }}">
+        <span class="num">{{ pillar.order | prepend: '0' | slice: -2, 2 }}</span>
+        <h3>{{ pillar.title }}</h3>
+        <p>{{ pillar.blurb }}</p>
+        <span class="cue">{{ pillar.question_count }} questions <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      {%- endfor %}
+    </div>
   </div>
 </section>

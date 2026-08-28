@@ -1,0 +1,18 @@
+<section class="mindsets" id="mindsets">
+  <div class="wrap">
+    <h2>{{ site.mindsets.heading }}</h2>
+    <p class="sub">{{ site.mindsets.sub }}</p>
+    <div class="mindgrid">
+      {%- for item in site.mindsets.items %}
+      {%- assign iconfile = item.icon %}
+      <a class="mind" href="{{ item.url | relative_url }}">
+        <span class="mind__icon" aria-hidden="true">{% include {{ iconfile }} %}</span>
+        <span class="mind__name">{{ item.name }}</span>
+        <p class="mind__claim">{{ item.claim }}</p>
+        <p class="mind__body">{{ item.body }}</p>
+        <span class="mind__cue">Read this one <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

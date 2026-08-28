@@ -45,6 +45,14 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .hero h1{font-size:clamp(2.05rem,1.5rem+2.6vw,3.35rem);font-weight:600;
   color:#fff;margin:.85rem 0 1rem}
 .hero p{max-width:34rem;color:#CFD8D2;margin:0}
+.hero__body{font-size:1.1rem}
+.hero__promise{margin-top:1rem!important;font-size:.95rem;color:#AFC3BB;
+  border-left:3px solid var(--brass);padding-left:.95rem}
+.hero__actions{margin-top:1.6rem!important}
+.hero__actions .btn{margin-top:0;background:var(--brass);color:#12211D;font-weight:600}
+.hero__actions .btn:hover{background:var(--brass-lt)}
+.hero__trust{margin-top:.9rem!important;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.74rem;letter-spacing:.04em;color:#8FA79E}
 .hero em{font-style:normal;color:var(--brass-lt)}
 .treewrap{display:flex;justify-content:center}
 
@@ -142,6 +150,62 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .prose h2{font-size:1.4rem;font-weight:600;margin:2rem 0 .6rem}
 .prose p{margin:0 0 1rem}
 .prose a{color:var(--pine);text-underline-offset:.15em}
+
+/* ---------- mindsets (self-identification) ---------- */
+.mindsets{padding-block:3.4rem 1rem}
+.mindsets h2{font-size:clamp(1.4rem,1.2rem+.8vw,1.85rem);font-weight:600;margin-bottom:.35rem}
+.mindsets .sub{color:var(--stone);font-size:.95rem;max-width:38rem;margin:0 0 1.7rem}
+.mindgrid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:46rem){.mindgrid{grid-template-columns:repeat(3,1fr)}}
+.mind{background:#fff;border:1px solid var(--rule);padding:1.4rem;
+  text-decoration:none;display:flex;flex-direction:column;gap:.4rem;
+  transition:border-color .14s,transform .14s}
+.mind:hover{border-color:var(--brass);transform:translateY(-2px)}
+.mind__icon{display:block;margin-bottom:.35rem}
+.mind__name{font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.mind__claim{font-family:"Fraunces",Georgia,serif;font-size:1.18rem;font-weight:600;
+  line-height:1.25;margin:0;color:var(--ink);letter-spacing:-.015em}
+.mind__body{margin:0;font-size:.88rem;color:var(--stone);line-height:1.55}
+.mind__cue{margin-top:auto;padding-top:1rem;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.74rem;color:var(--pine)}
+
+/* ---------- three-step journey ---------- */
+.journey{background:var(--pine);color:#EDF2EF;padding-block:3.4rem;margin-top:3rem}
+.journey .label{color:var(--brass-lt);display:block;margin-bottom:.7rem}
+.journey h2{font-size:clamp(1.5rem,1.2rem+1.1vw,2.1rem);font-weight:600;color:#fff}
+.journey .sub{color:#BDD0C9;font-size:.95rem;max-width:38rem;margin:.6rem 0 2.2rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1.8rem}
+@media(min-width:52rem){.steps{grid-template-columns:repeat(3,1fr);gap:2.2rem}}
+.step{position:relative;padding-top:1.4rem;border-top:1px solid rgba(217,178,78,.35)}
+.step__num{font-family:"Fraunces",serif;font-size:2.4rem;font-weight:600;
+  color:var(--brass-lt);line-height:1;display:block;margin-bottom:.5rem}
+.step h3{font-size:1.16rem;font-weight:600;color:#fff}
+.step__theme{font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--brass-lt);margin:.35rem 0 .6rem}
+.step__body{margin:0;font-size:.9rem;color:#BDD0C9;line-height:1.55}
+
+/* ---------- author story ---------- */
+.story{padding-block:3.4rem}
+.story__in{display:grid;gap:1.8rem;align-items:center}
+@media(min-width:46rem){.story__in{grid-template-columns:auto 1fr;gap:2.6rem}}
+.story__portrait{width:11rem;flex:none}
+.story__portrait img{width:100%;height:auto;display:block;
+  border:1px solid var(--rule)}
+.story__monogram{display:grid;place-items:center;width:11rem;aspect-ratio:5/6;
+  background:linear-gradient(160deg,#F6F1E0,#E8DFC6);border:1px solid var(--rule);
+  font-family:"Fraunces",serif;font-size:2.6rem;font-weight:600;color:var(--pine);
+  letter-spacing:.02em}
+.story .label{color:var(--brass);display:block;margin-bottom:.8rem}
+.story__quote{margin:0 0 1rem;border-left:3px solid var(--brass);padding-left:1.2rem}
+.story__quote p{margin:0;font-family:"Fraunces",Georgia,serif;
+  font-size:clamp(1.25rem,1.05rem+.9vw,1.7rem);font-weight:600;line-height:1.25;
+  letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+.story__body{color:var(--stone);font-size:.95rem;max-width:36rem;margin:0 0 1.1rem}
+.story__by{font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;margin:0;color:var(--stone)}
+.story__by strong{display:block;color:var(--ink);font-weight:600}
+.btn--ghost{background:transparent;color:var(--pine);border:1px solid var(--pine)}
+.btn--ghost:hover{background:var(--pine);color:#fff}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--rule);padding-block:2rem 3rem;

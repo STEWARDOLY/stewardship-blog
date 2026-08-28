@@ -1,0 +1,26 @@
+<section class="story">
+  <div class="wrap story__in">
+    <div class="story__portrait">
+      {%- if site.story.portrait and site.story.portrait != '' %}
+      <img src="{{ site.story.portrait | relative_url }}"
+           alt="{{ site.story.portrait_alt | default: site.story.attribution }}"
+           width="220" height="264" loading="lazy">
+      {%- else %}
+      {%- assign name_parts = site.story.attribution | split: ' ' %}
+      <span class="story__monogram" aria-hidden="true">{% for part in name_parts %}{{ part | slice: 0 }}{% endfor %}</span>
+      {%- endif %}
+    </div>
+    <div>
+      <p class="label">{{ site.story.label }}</p>
+      <blockquote class="story__quote">
+        <p>{{ site.story.pull_quote }}</p>
+      </blockquote>
+      <p class="story__body">{{ site.story.body }}</p>
+      <p class="story__by">
+        <strong>{{ site.story.attribution }}</strong>
+        <span>{{ site.story.attribution_role }}</span>
+      </p>
+      <a class="btn btn--ghost" href="{{ site.story.cta_url | relative_url }}">{{ site.story.cta_text }}</a>
+    </div>
+  </div>
+</section>

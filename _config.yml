@@ -2,6 +2,9 @@
 # Stewardship Journeys — site configuration
 # All homepage copy lives here or in the _pillars collection. Templates in
 # _layouts/ and _includes/ read from this file; none of it is hard-coded.
+#
+# Copy is adapted from "Financial Freedom Through Godly Stewardship"
+# by Rowan Rivers. Section references are noted beside each block.
 # ---------------------------------------------------------------------------
 
 title: Stewardship Journeys
@@ -46,17 +49,60 @@ nav:
       url: /about/
 
 # ---------------------------------------------------------------------------
-# Hero
+# Hero — leads with the reader's felt problem, not the site's mission.
+# Questions are from the book's Introduction.
 # ---------------------------------------------------------------------------
 hero:
   label: Biblical wisdom · practical money
-  heading: Most people arrive here carrying one question.
   # Inline HTML is allowed in these strings; <em> renders in the brass accent.
+  heading: The money questions you don't ask out loud at church.
   body: >-
-    Plain answers to the money questions Christians actually ask — the ones
-    that are hard to say out loud at church. Every page gives the answer first,
-    shows the passages it rests on, and says honestly <em>where believers
-    disagree</em>.
+    How do I find financial freedom without losing my soul? How do I escape
+    debt, anxiety, and the feeling that there is never enough? Can I honour God
+    with my money and still meet my needs?
+  # Short, plain-language promise. Keep it to one line.
+  promise: >-
+    Every answer here starts with the answer — then the passages it rests on,
+    then an honest note on <em>where believers disagree</em>.
+  cta_text: Start with your question
+  cta_url: "#ledger"
+  # Small trust line under the buttons.
+  trust: Free to read · No sign-in · Scripture cited on every page
+
+# ---------------------------------------------------------------------------
+# Mindsets — the self-identification section. Adapted from the Introduction,
+# "Money Is Not Just a Financial Issue -- It's a Spiritual One".
+# This sits directly under the hero so a reader meets their own problem first.
+# ---------------------------------------------------------------------------
+mindsets:
+  heading: Which one sounds like you?
+  sub: >-
+    Most money struggles are not arithmetic. They are one of three beliefs,
+    absorbed so quietly you may never have said them out loud.
+  items:
+    - name: Scarcity
+      claim: "There will not be enough."
+      body: >-
+        You hold tight, share little, and treat other people's success as a
+        threat to your own slice. The pie always looks fixed.
+      icon: icon-scarcity.svg
+      url: /budgeting-saving/
+    - name: Self-reliance
+      claim: "It all depends on me."
+      body: >-
+        You carry your family's whole future on your shoulders, paralysed by
+        the fear of one wrong move. You are exhausted — not from working hard,
+        but from carrying what was never yours alone.
+      icon: icon-self-reliance.svg
+      url: /anxiety-provision/
+    - name: Shame
+      claim: "Wanting more must be unspiritual."
+      body: >-
+        You treat your ambition like a secret sin, certain that real Christians
+        only care about higher things. So you keep the engine running and the
+        car in the garage.
+      icon: icon-shame.svg
+      url: /wealth-prosperity/
 
 # ---------------------------------------------------------------------------
 # Question ledger
@@ -97,10 +143,61 @@ howto:
     quote it accurately.
 
 # ---------------------------------------------------------------------------
+# The three-step journey — the book's spine, used here as a visual anchor.
+# ---------------------------------------------------------------------------
+journey:
+  label: The path these answers sit on
+  heading: Freedom is built from the inside out.
+  sub: >-
+    Every answer on this site belongs somewhere on a three-step path. Knowing
+    which step you are standing on usually matters more than the individual
+    question.
+  steps:
+    - name: Align Your Heart
+      theme: Identity &amp; surrender
+      body: >-
+        See God as your Provider, not your paycheck. Reframe what you believe
+        about money before you touch a spreadsheet.
+    - name: Apply God's Wisdom
+      theme: Discipline &amp; strategy
+      body: >-
+        Budgeting, saving, giving, investing — the practical disciplines, each
+        rooted in Scripture rather than in a guru's system.
+    - name: Build for Eternity
+      theme: Purpose &amp; legacy
+      body: >-
+        Live with purpose and make an impact that outlives your bank account.
+
+# ---------------------------------------------------------------------------
+# Author story — the strongest trust signal on the page. Quoted from the
+# book's Preface. Specificity is what makes this work; do not smooth it out.
+# ---------------------------------------------------------------------------
+story:
+  label: Why trust these answers
+  # The opening line of the Preface, quoted.
+  pull_quote: >-
+    I once lost almost everything: my legs, my left eye, my house, ninety
+    percent of my savings, my career, my marriage.
+  body: >-
+    A single leveraged investment, driven by greed, took ninety percent of what
+    I had saved. What changed my life afterwards was not a smarter financial
+    plan or a new income stream. It was surrender.
+  attribution: Rowan Rivers
+  attribution_role: Author, Financial Freedom Through Godly Stewardship
+  cta_text: Read the whole story
+  cta_url: /about/
+  # Drop a portrait at assets/img/ and put the filename here, e.g.
+  # portrait: /assets/img/rowan-rivers.jpg
+  # While this is empty a monogram placeholder renders instead.
+  portrait: ""
+  portrait_alt: ""
+
+# ---------------------------------------------------------------------------
 # Topic grid heading (the six cards come from _pillars)
 # ---------------------------------------------------------------------------
 topics:
   heading: Six topics
+  sub: Every question on the site lives in one of these.
 
 # ---------------------------------------------------------------------------
 # Book panel

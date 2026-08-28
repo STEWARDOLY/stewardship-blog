@@ -1,0 +1,18 @@
+<section class="journey">
+  <div class="wrap">
+    <p class="label">{{ site.journey.label }}</p>
+    <h2>{{ site.journey.heading }}</h2>
+    <p class="sub">{{ site.journey.sub }}</p>
+
+    <ol class="steps">
+      {%- for step in site.journey.steps %}
+      <li class="step">
+        <span class="step__num" aria-hidden="true">{{ forloop.index }}</span>
+        <h3>{{ step.name }}</h3>
+        <p class="step__theme">{{ step.theme }}</p>
+        <p class="step__body">{{ step.body }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
