@@ -12,11 +12,11 @@
 </head>
 <body>
 
-{% include masthead.html %}
+{% unless page.minimal %}{% include masthead.html %}{% endunless %}
 
 {{ content }}
 
-{% include footer.html %}
+{% unless page.minimal %}{% include footer.html %}{% endunless %}
 
 </body>
 </html>

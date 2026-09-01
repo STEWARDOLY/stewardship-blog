@@ -239,3 +239,38 @@ footer_notes:
     This site explains what Scripture says about money. It is not financial,
     legal, or tax advice, and it is not a substitute for a licensed
     professional who knows your situation.
+
+# ---------------------------------------------------------------------------
+# Sign-in page (/login/)
+#
+# Deliberately passwordless and email-only. The audience for this site is
+# shame-sensitive about money (see the book's Introduction), so social sign-in
+# buttons read as exposure and are omitted on purpose. One field, one button,
+# and an explicit privacy promise.
+#
+# `action` must point at a magic-link / passwordless provider endpoint. While
+# it is blank the form renders disabled rather than collecting an address that
+# goes nowhere. GitHub Pages is static and cannot authenticate on its own.
+# ---------------------------------------------------------------------------
+login:
+  heading: Welcome back.
+  sub: >-
+    Enter your email and we'll send you a sign-in link. No password to
+    remember, and nothing new to create.
+  placeholder: you@example.com
+  button: Email me a sign-in link
+  # Shown under the button. This is the most important line on the page.
+  privacy: >-
+    Your email is only ever used to sign you in. We never show your name, your
+    questions, or your notes to anyone — not to your church, not to advertisers,
+    not to another reader.
+  behind_heading: What's behind the door
+  behind:
+    - Your Stewardship Notes — reflections, commitments and answered prayers, private to you
+    - The Stewardship Scripture Index, saved where you can find it again
+    - Any answer you've marked to come back to
+  scripture: The earth is the LORD's, with its fullness.
+  scripture_ref: Psalm 24:1
+  help_text: Trouble signing in?
+  help_url: /about/
+  action: ""

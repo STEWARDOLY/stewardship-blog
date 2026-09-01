@@ -66,3 +66,18 @@ bundle exec jekyll serve
 ```
 
 Then open <http://localhost:4000/stewardship-blog/>.
+
+## The sign-in page (`/login/`)
+
+Deliberately passwordless and email-only. The audience is shame-sensitive
+about money, so social sign-in buttons ("Continue with Google") read as
+exposure and are omitted on purpose — as is any password field, which would
+mean asking a hesitant reader to create one more credential.
+
+GitHub Pages is static and **cannot authenticate anyone on its own.** The page
+is the front end only. Point `login.action` in `_config.yml` at a passwordless
+provider endpoint to activate it; while it is blank the form renders disabled
+rather than collecting an address that goes nowhere.
+
+Pages with `minimal: true` in their front matter render without the masthead
+and footer, to reduce exit points.

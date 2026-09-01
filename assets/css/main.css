@@ -207,6 +207,47 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .btn--ghost{background:transparent;color:var(--pine);border:1px solid var(--pine)}
 .btn--ghost:hover{background:var(--pine);color:#fff}
 
+/* ---------- sign-in ---------- */
+.auth{min-height:100vh;display:grid;align-content:center;justify-items:center;
+  gap:1.6rem;padding:2.5rem 1.1rem 3rem;background:var(--paper)}
+.auth__card{width:min(100%,26.5rem);background:#fff;border:1px solid var(--rule);
+  padding:2rem 1.8rem 1.7rem}
+.auth__brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;
+  margin-bottom:1.7rem}
+.auth__brand b{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;
+  color:var(--pine);letter-spacing:-.015em}
+.auth h1{font-size:1.65rem;font-weight:600;margin-bottom:.45rem}
+.auth__sub{color:var(--stone);font-size:.92rem;margin:0 0 1.5rem;line-height:1.55}
+.auth__form{display:grid;gap:.55rem}
+.auth__label{font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--stone)}
+.auth__form input{padding:.82rem .9rem;border:1px solid var(--rule);background:var(--paper);
+  font:inherit;font-size:.95rem;color:var(--ink)}
+.auth__form input:focus{border-color:var(--brass);background:#fff}
+.auth__form button{margin-top:.35rem;padding:.85rem 1.2rem;border:0;background:var(--pine);
+  color:#fff;font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:.9rem;
+  cursor:pointer;transition:background .14s}
+.auth__form button:hover{background:var(--brass);color:#12211D}
+.auth__form.is-inert{opacity:.62}
+.auth__form.is-inert button{cursor:not-allowed}
+.auth__note{margin:.7rem 0 0;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.74rem;color:var(--stone);line-height:1.5}
+.auth__privacy{margin:1.3rem 0 0;padding-left:.9rem;border-left:3px solid var(--brass);
+  font-size:.82rem;color:var(--stone);line-height:1.55}
+.auth__behind{margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid var(--rule)}
+.auth__behind .label{color:var(--brass);display:block;margin-bottom:.7rem}
+.auth__behind ul{margin:0;padding-left:1.05rem;display:grid;gap:.45rem}
+.auth__behind li{font-size:.85rem;color:var(--stone);line-height:1.5}
+.auth__behind li::marker{color:var(--brass)}
+.auth__help{margin:1.5rem 0 0;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem}
+.auth__help a{color:var(--pine)}
+.auth__scripture{margin:0;text-align:center;max-width:26.5rem}
+.auth__scripture q{quotes:none;display:block;font-family:"Fraunces",Georgia,serif;
+  font-size:.98rem;color:var(--stone);line-height:1.4}
+.auth__scripture cite{display:block;margin-top:.35rem;font-style:normal;
+  font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass)}
+
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--rule);padding-block:2rem 3rem;
   font-family:"IBM Plex Sans",sans-serif;font-size:.82rem;color:var(--stone)}
