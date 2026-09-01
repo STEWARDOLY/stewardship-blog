@@ -1,0 +1,5 @@
+<div class="bubbles" role="list" aria-label="Questions readers arrive with">
+  {%- for q in site.hero.questions %}
+  <p class="bubble {% cycle 'bubble--in', 'bubble--out' %}" role="listitem">{{ q }}</p>
+  {%- endfor %}
+</div>

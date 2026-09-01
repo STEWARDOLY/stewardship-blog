@@ -1,0 +1,21 @@
+<section class="spectrum">
+  <div class="wrap">
+    <p class="label">{{ site.spectrum.label }}</p>
+    <h2>{{ site.spectrum.heading }}</h2>
+    <p class="sub">{{ site.spectrum.sub }}</p>
+
+    <div class="spec" role="img"
+         aria-label="{{ site.spectrum.left }}. {{ site.spectrum.middle }}. {{ site.spectrum.right }}">
+      <div class="spec__bar"></div>
+      <ol class="spec__stops">
+        {%- for stop in site.spectrum.stops %}
+        <li class="spec__stop">
+          <span class="spec__dot" aria-hidden="true"></span>
+          <span class="spec__label">{{ stop.label }}</span>
+          <span class="spec__note">{{ stop.note }}</span>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

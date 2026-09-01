@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="pagehead">
+  <div class="wrap">
+    <p class="label">{{ site.scripture_index.label }}</p>
+    <h1>{{ site.scripture_index.heading }}</h1>
+    <p class="pagehead__blurb">{{ site.scripture_index.sub }}</p>
+  </div>
+</section>
+
+<main class="wrap si">
+  <nav class="si__toc" aria-label="Situations">
+    {%- for sec in site.data.scripture_index.sections %}
+    <a href="#{{ sec.name | replace: '&amp;', 'and' | slugify }}">{{ sec.name }}</a>
+    {%- endfor %}
+  </nav>
+
+  {%- for sec in site.data.scripture_index.sections %}
+  <section class="si__sec" id="{{ sec.name | replace: '&amp;', 'and' | slugify }}">
+    <h2>{{ sec.name }}</h2>
+    <p class="si__q">{{ sec.question }}</p>
+    <p class="si__summary">{{ sec.summary }}</p>
+    <ul class="si__refs">
+      {%- for r in sec.refs %}
+      <li>
+        <span class="si__ref">{{ r.ref }}</span>
+        <span class="si__note">{{ r.note }}</span>
+        <span class="si__page">p.&nbsp;{{ r.page }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+
+  <p class="si__foot">{{ site.scripture_index.note }}</p>
+</main>

@@ -54,19 +54,19 @@ nav:
 # ---------------------------------------------------------------------------
 hero:
   label: Biblical wisdom · practical money
-  # Inline HTML is allowed in these strings; <em> renders in the brass accent.
   heading: The money questions you don't ask out loud at church.
-  body: >-
-    How do I find financial freedom without losing my soul? How do I escape
-    debt, anxiety, and the feeling that there is never enough? Can I honour God
-    with my money and still meet my needs?
-  # Short, plain-language promise. Keep it to one line.
-  promise: >-
-    Every answer here starts with the answer — then the passages it rests on,
-    then an honest note on <em>where believers disagree</em>.
+  # Rendered as a chat thread of bubbles, alternating sides in order.
+  # Keep each one short — a bubble should never wrap past two lines.
+  questions:
+    - Is it a sin to be in debt?
+    - Can I stop tithing while I pay off debt?
+    - Is saving money a lack of faith?
+    - Do I tithe on gross or net income?
+    - Is it a sin to worry about money?
+    - How do I find financial freedom without losing my soul?
   cta_text: Start with your question
   cta_url: "#ledger"
-  # Small trust line under the buttons.
+  # Small trust line under the button.
   trust: Free to read · No sign-in · Scripture cited on every page
 
 # ---------------------------------------------------------------------------
@@ -212,7 +212,7 @@ book:
     Three steps, twelve chapters, with reflection questions and a devotional
     prayer at the end of each. 181 pages, paperback and Kindle.
   cta_text: About the book
-  cta_url: /book/
+  cta_url: https://www.amazon.com/dp/B0HCC69G7V
 
 # ---------------------------------------------------------------------------
 # Email capture
@@ -241,87 +241,79 @@ footer_notes:
     professional who knows your situation.
 
 # ---------------------------------------------------------------------------
-# Sign-in page (/login/)
-#
-# Deliberately passwordless and email-only. The audience for this site is
-# shame-sensitive about money (see the book's Introduction), so social sign-in
-# buttons read as exposure and are omitted on purpose. One field, one button,
-# and an explicit privacy promise.
-#
-# `action` must point at a magic-link / passwordless provider endpoint. While
-# it is blank the form renders disabled rather than collecting an address that
-# goes nowhere. GitHub Pages is static and cannot authenticate on its own.
+# Audience spectrum — from the target-audience analysis.
+# Corrects the assumption that this site is only for people in financial
+# trouble. The book addresses the whole range.
 # ---------------------------------------------------------------------------
-login:
-  heading: Welcome back.
+spectrum:
+  label: Wherever you are on the spectrum
+  heading: This is not only for people in financial trouble.
   sub: >-
-    Enter your email and we'll send you a sign-in link. No password to
-    remember, and nothing new to create.
-  placeholder: you@example.com
-  button: Email me a sign-in link
-  # Shown under the button. This is the most important line on the page.
-  privacy: >-
-    Your email is only ever used to sign you in. We never show your name, your
-    questions, or your notes to anyone — not to your church, not to advertisers,
-    not to another reader.
-  behind_heading: What's behind the door
-  behind:
-    - Your Stewardship Notes — reflections, commitments and answered prayers, private to you
-    - The Stewardship Scripture Index, saved where you can find it again
-    - Any answer you've marked to come back to
-  scripture: The earth is the LORD's, with its fullness.
-  scripture_ref: Psalm 24:1
-  help_text: Trouble signing in?
-  help_url: /about/
-  action: ""
+    You may be burdened by having too little money, or by money having too much
+    control over you, or you may be doing well and sensing a call to something
+    deeper. All three belong here.
+  left: Too little of it — debt, scarcity, paycheck to paycheck
+  middle: Comfortable, but money is quietly running the decisions
+  right: Doing well, and sensing God calling you deeper
+  stops:
+    - label: Scarcity
+      note: Debt, and the fear there will never be enough
+    - label: Control
+      note: Money is the thing setting your calendar
+    - label: Calling
+      note: Provision is not the problem — purpose is
 
 # ---------------------------------------------------------------------------
-# Landing page (/scripture-index/)
+# Landing page (/start/)
 #
-# A single-purpose conversion page for the Scripture Index lead magnet.
-# One promise, one field, one button, no navigation.
+# A no-navigation conversion page. Order: questions -> spectrum -> six topics
+# -> Scripture Index -> what's inside it -> the book.
 #
-# Per the audience analysis: this reader needs permission before tactics, so
-# the book is not pitched above the ask. The privacy line names their actual
-# fear — being seen by their church — rather than saying "we value privacy".
-#
-# `action` must point at an email provider endpoint. While blank the form
-# renders disabled rather than collecting addresses that go nowhere.
+# The hero reuses `hero.questions` so the bubbles stay in sync with the
+# homepage. The "what's inside" list is generated from _data/scripture_index.yml
+# so it can never drift from the actual index.
 # ---------------------------------------------------------------------------
 landing:
-  eyebrow: Free · One page · No sign-in
-  heading: The money questions you can't ask at church — and the passages that answer them.
-  sub: >-
-    The Stewardship Scripture Index gathers every passage on money in Scripture
-    and sorts it by what you are actually facing. Not by book and chapter — by
-    debt, giving, worry, provision, and work.
+  eyebrow: Biblical wisdom · practical money
+  heading: The money questions you don't ask out loud at church.
+  cta_text: Start with your question
+  cta_url: "#topics"
+  trust: Free to read · No sign-in · Scripture cited on every page
+
+  # The Scripture Index call to action
+  index_label: The free companion
+  index_heading: The Stewardship Scripture Index
+  index_sub: >-
+    Every passage on money in Scripture, re-sorted out of book-and-chapter
+    order into the situation you are actually in — debt, worry, giving,
+    planning, work, legacy.
   placeholder: you@example.com
   button: Send me the index
   privacy: >-
     One email, then the index. We never sell or share your address, and nothing
     you read here is ever visible to anyone at your church.
-  inside_heading: What's inside
-  inside:
-    - topic: Debt &amp; borrowing
-      refs: Proverbs 22:7 · Leviticus 25 · Nehemiah 5
-    - topic: Giving &amp; the tithe
-      refs: Genesis 14:20 · Proverbs 3:9 · 2 Corinthians 8–9
-    - topic: Worry &amp; provision
-      refs: Matthew 6:25–33 · Philippians 4:6 · 1 Kings 17
-    - topic: Saving &amp; planning
-      refs: Proverbs 6:6–8 · Proverbs 21:20 · Luke 14:28
-    - topic: Work &amp; earning
-      refs: Deuteronomy 8:18 · Colossians 3:23
-    - topic: Wealth &amp; contentment
-      refs: Ecclesiastes 5:10 · 1 Timothy 6:6–10
-  trust_heading: Why trust it
-  trust: >-
-    Compiled by Rowan Rivers, author of <em>Financial Freedom Through Godly
-    Stewardship</em>, who lost ninety percent of a life's savings before
-    learning to steward the rest. Every reference is quoted from the World
-    English Bible, which is in the public domain, so you can check all of it.
-  closing_heading: You were not made to carry this quietly.
-  closing: >-
-    The index is one page. It costs nothing, it asks nothing of you beyond an
-    address, and you can read it without telling anyone you needed it.
+  read_now: Or read the whole index now — no email needed
+  read_now_url: /scripture-index/
+
+  inside_label: What's inside
+  inside_heading: Eight situations, and the passages that speak to each.
+  inside_sub: >-
+    Drawn from every reference in the book, with the page number so you can
+    read the argument behind it.
+
   action: ""
+
+# ---------------------------------------------------------------------------
+# The Scripture Index page (/scripture-index/)
+# Content lives in _data/scripture_index.yml
+# ---------------------------------------------------------------------------
+scripture_index:
+  label: Free · One page · No sign-in
+  heading: The Stewardship Scripture Index
+  sub: >-
+    Every passage on money quoted or referenced in <em>Financial Freedom
+    Through Godly Stewardship</em>, sorted by what you are facing rather than
+    by book and chapter. Page numbers refer to the paperback.
+  note: >-
+    Scripture quotations and references follow the World English Bible, which
+    is in the public domain, so every line here is yours to check.

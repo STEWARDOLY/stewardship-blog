@@ -3,52 +3,74 @@ layout: default
 ---
 <main class="lp">
 
-  <section class="lp__hero">
-    <div class="wrap lp__col">
-      <a class="lp__brand" href="{{ '/' | relative_url }}">
-        {% include logo.svg %}
-        <b>{{ site.title }}</b>
-      </a>
-      <p class="label lp__eyebrow">{{ site.landing.eyebrow }}</p>
-      <h1>{{ site.landing.heading }}</h1>
-      <p class="lp__sub">{{ site.landing.sub }}</p>
-      {% include landing-form.html id="email-top" %}
-      <p class="lp__privacy">{{ site.landing.privacy }}</p>
+  <section class="hero lp__hero">
+    <div class="wrap hero__in">
+      <div>
+        <a class="lp__brand" href="{{ '/' | relative_url }}">
+          {% include logo.svg %}
+          <b>{{ site.title }}</b>
+        </a>
+        <p class="label">{{ site.landing.eyebrow }}</p>
+        <h1>{{ site.landing.heading }}</h1>
+        {% include question-bubbles.html %}
+        <p class="hero__actions">
+          <a class="btn" href="{{ site.landing.cta_url }}">{{ site.landing.cta_text }}</a>
+        </p>
+        <p class="hero__trust">{{ site.landing.trust }}</p>
+      </div>
+      <div class="treewrap">
+        {% include tree.svg %}
+      </div>
     </div>
   </section>
 
-  <section class="lp__inside">
-    <div class="wrap lp__col">
+  {% include spectrum.html %}
+
+  <div id="topics">
+    {% include topics.html %}
+  </div>
+
+  <section class="capture">
+    <div class="wrap">
+      <div class="capture__box">
+        <p class="label capture__eyebrow">{{ site.landing.index_label }}</p>
+        <h2>{{ site.landing.index_heading }}</h2>
+        <p>{{ site.landing.index_sub }}</p>
+        {% include landing-form.html id="email-top" %}
+        <p class="capture__note">{{ site.landing.privacy }}</p>
+        <p class="capture__alt">
+          <a href="{{ site.landing.read_now_url | relative_url }}">{{ site.landing.read_now }}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <p class="label">{{ site.landing.inside_label }}</p>
       <h2>{{ site.landing.inside_heading }}</h2>
-      <ul class="lp__list">
-        {%- for row in site.landing.inside %}
-        <li>
-          <span class="lp__topic">{{ row.topic }}</span>
-          <span class="lp__refs">{{ row.refs }}</span>
+      <p class="sub">{{ site.landing.inside_sub }}</p>
+
+      <ul class="inside__list">
+        {%- for sec in site.data.scripture_index.sections %}
+        <li class="inside__row">
+          <span class="inside__q">{{ sec.question }}</span>
+          <span class="inside__name">{{ sec.name }}</span>
+          <span class="inside__count">{{ sec.refs | size }} passages</span>
         </li>
         {%- endfor %}
       </ul>
+
+      <p class="inside__cta">
+        <a class="btn btn--ghost" href="{{ site.landing.read_now_url | relative_url }}">Read the whole index</a>
+      </p>
     </div>
   </section>
 
-  <section class="lp__trust">
-    <div class="wrap lp__col">
-      <span class="label">{{ site.landing.trust_heading }}</span>
-      <p>{{ site.landing.trust }}</p>
-    </div>
-  </section>
-
-  <section class="lp__close">
-    <div class="wrap lp__col">
-      <h2>{{ site.landing.closing_heading }}</h2>
-      <p class="lp__sub">{{ site.landing.closing }}</p>
-      {% include landing-form.html id="email-bottom" %}
-      <p class="lp__privacy">{{ site.landing.privacy }}</p>
-    </div>
-  </section>
+  {% include book.html %}
 
   <footer class="lp__foot">
-    <div class="wrap lp__col">
+    <div class="wrap">
       {%- for note in site.footer_notes %}
       <p>{{ note }}</p>
       {%- endfor %}

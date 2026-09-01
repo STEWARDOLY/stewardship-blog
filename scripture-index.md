@@ -1,7 +1,6 @@
 ---
-layout: landing
+layout: scripture-index
 title: The Stewardship Scripture Index
 permalink: /scripture-index/
-minimal: true
-description: Every passage on money in Scripture, sorted by what you're facing — debt, giving, worry, provision, work.
+description: Every passage on money in Scripture, sorted by what you're facing — debt, worry, giving, planning, work, legacy.
 ---

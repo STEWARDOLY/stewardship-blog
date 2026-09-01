@@ -3,8 +3,7 @@
     <div>
       <p class="label">{{ site.hero.label }}</p>
       <h1>{{ site.hero.heading }}</h1>
-      <p class="hero__body">{{ site.hero.body }}</p>
-      <p class="hero__promise">{{ site.hero.promise }}</p>
+      {% include question-bubbles.html %}
       <p class="hero__actions">
         <a class="btn" href="{{ site.hero.cta_url }}">{{ site.hero.cta_text }}</a>
       </p>

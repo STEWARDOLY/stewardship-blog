@@ -67,32 +67,28 @@ bundle exec jekyll serve
 
 Then open <http://localhost:4000/stewardship-blog/>.
 
-## The sign-in page (`/login/`)
+## The landing page (`/start/`)
 
-Deliberately passwordless and email-only. The audience is shame-sensitive
-about money, so social sign-in buttons ("Continue with Google") read as
-exposure and are omitted on purpose — as is any password field, which would
-mean asking a hesitant reader to create one more credential.
+A no-navigation conversion page. Order: question bubbles → audience spectrum →
+six topics → Scripture Index → what's inside it → the book.
 
-GitHub Pages is static and **cannot authenticate anyone on its own.** The page
-is the front end only. Point `login.action` in `_config.yml` at a passwordless
-provider endpoint to activate it; while it is blank the form renders disabled
-rather than collecting an address that goes nowhere.
+The hero reuses `hero.questions`, so the bubbles stay in sync with the
+homepage. The "what's inside" list is generated from
+`_data/scripture_index.yml`, so it can never drift from the actual index.
 
-Pages with `minimal: true` in their front matter render without the masthead
-and footer, to reduce exit points.
+Set `landing.action` to your email provider's form endpoint to activate the
+form; until then it renders disabled rather than collecting addresses that go
+nowhere.
 
-## The landing page (`/scripture-index/`)
+Pages with `minimal: true` render without the masthead and footer.
 
-A single-purpose conversion page for the Scripture Index lead magnet: one
-promise, one field, one button, no navigation. Driven by the `landing` block
-in `_config.yml`.
+## The Scripture Index (`/scripture-index/`)
 
-The book is deliberately not pitched above the ask. Per the audience analysis,
-this reader needs permission before tactics and reacts badly to being sold to
-while raw — so the page asks for an email and nothing else.
+Content lives in `_data/scripture_index.yml` — every passage quoted or
+referenced in the book, re-sorted from canonical order into the situation the
+reader is in, with paperback page numbers.
 
-Set `landing.action` to your email provider's form endpoint to activate it.
-Until then both forms render disabled rather than collecting addresses that go
-nowhere. To repoint the page at the book instead of the index, the copy is all
-in the `landing` block — no template changes needed.
+Sourced from the book's own Scripture Index (pp. 160–165), mapped to the
+chapter each reference is discussed in. **If a passage is not in the book, it
+is not in this index** — keep it that way, since the page's whole promise is
+that every line is checkable.

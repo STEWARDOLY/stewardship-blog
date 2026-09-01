@@ -1,0 +1,409 @@
+# ---------------------------------------------------------------------------
+# The Stewardship Scripture Index
+#
+# Every passage quoted or referenced in "Financial Freedom Through Godly
+# Stewardship", re-sorted from canonical order into the situation the reader
+# is actually in. Page numbers refer to the paperback.
+#
+# Source: the book's own Scripture Index (pp. 160-165), mapped to the chapter
+# each reference is discussed in. Nothing here is invented — if a passage is
+# not in the book, it is not in this index.
+#
+# This file drives both /scripture-index/ and the "what's inside" preview on
+# the landing page.
+# ---------------------------------------------------------------------------
+
+sections:
+  - name: Debt &amp; borrowing
+    question: Am I in debt, or afraid of it?
+    summary: >-
+      Scripture never calls borrowing a sin. It calls it a territory of
+      danger — a tool that becomes a tyrant when mishandled.
+    refs:
+      - ref: Proverbs 22:7
+        page: 100
+        note: The borrower is servant to the lender. A statement about mastery, not morality.
+      - ref: Romans 13:8
+        page: 99
+        note: Owe no one anything, except to love one another.
+      - ref: Leviticus 25
+        page: 100
+        note: The Year of Jubilee — every debt cancelled, every family's land returned.
+      - ref: Leviticus 25:23
+        page: 101
+        note: >-
+          "The land is mine." Israel held it as stewards, never as owners.
+      - ref: Luke 4:18–19
+        page: 101
+        note: Jesus proclaims the acceptable year of the Lord — Jubilee as the shape of the gospel.
+      - ref: Nehemiah 5
+        page: 103
+        note: Famine and taxes drive families to mortgage fields and sell children.
+      - ref: Nehemiah 5:9
+        page: 104
+        note: >-
+          "Shouldn't you walk in the fear of our God?" Legal lending that still violated the covenant.
+      - ref: Proverbs 13:11
+        page: 102
+        note: Wealth gained dishonestly dwindles; gathered by hand, it grows.
+      - ref: Ecclesiastes 10:10
+        page: 102
+        note: A blunt axe demands more strength. Work smarter, not only harder.
+      - ref: Luke 14:28
+        page: 106
+        note: Count the cost before you build — the question to ask before you borrow.
+
+  - name: Worry, fear &amp; provision
+    question: Am I afraid there will not be enough?
+    summary: >-
+      The passages the book uses to answer financial fear — not by promising
+      wealth, but by relocating the reader's trust.
+    refs:
+      - ref: Matthew 6:25–34
+        page: 25
+        note: Do not be anxious for your life. The central passage on financial worry.
+      - ref: Matthew 6:26
+        page: 23
+        note: Consider the birds — your heavenly Father feeds them.
+      - ref: Exodus 16
+        page: 24
+        note: Manna in the wilderness. Enough for one day, and no way to hoard it.
+      - ref: 1 Kings 17
+        page: 25
+        note: Elijah and the widow at Zarephath, down to her last handful of meal.
+      - ref: Luke 5:1–11
+        page: 27
+        note: Peter's catch, after a whole night of catching nothing.
+      - ref: Mark 11:24
+        page: 18
+        note: Believe that you have received them, and you shall have them.
+      - ref: Luke 22:42
+        page: 19
+        note: >-
+          "Not my will, but yours, be done." The prayer underneath every other one.
+      - ref: Matthew 16:18
+        page: 28
+        note: On this rock I will build my church — Peter renamed before he was reliable.
+
+  - name: Giving &amp; the tithe
+    question: What am I actually meant to give?
+    summary: >-
+      Whether the tithe binds Christians today, what the patriarchs did before
+      the law, and what generosity looks like past the ten percent.
+    refs:
+      - ref: Genesis 14:20
+        page: 72
+        note: Abraham gives Melchizedek a tenth of all — centuries before the law required it.
+      - ref: Genesis 28:22
+        page: 73
+        note: Jacob's vow at Bethel — "of all that you give me I will surely give a tenth."
+      - ref: Genesis 4
+        page: 74
+        note: Cain and Abel. The offering was never only about the goods.
+      - ref: Leviticus 27:30
+        page: 74
+        note: The tithe of the land is the LORD's; it is holy.
+      - ref: Deuteronomy 14:28–29
+        page: 74
+        note: The third-year tithe, kept for the Levite, the foreigner, the orphan and the widow.
+      - ref: Malachi 3:10
+        page: 74
+        note: Bring the whole tithe into the storehouse — the one place God invites a test.
+      - ref: Mark 12:41–44
+        page: 77
+        note: The widow's two small coins, worth more than all the rest.
+      - ref: 2 Corinthians 9:7
+        page: 77
+        note: Not grudgingly or under compulsion — God loves a cheerful giver.
+      - ref: 2 Corinthians 8
+        page: 78
+        note: The Macedonians gave beyond their means, and begged for the privilege.
+      - ref: Luke 6:38
+        page: 71
+        note: Give, and it will be given to you — pressed down, shaken together, running over.
+      - ref: Luke 6:35
+        page: 79
+        note: Lend, expecting nothing back.
+      - ref: 2 Corinthians 9:11
+        page: 88
+        note: Enriched in everything for all generosity — the purpose of the increase.
+
+  - name: Planning, saving &amp; investing
+    question: Does planning mean I don't trust God?
+    summary: >-
+      The book's answer is no, and these are the passages it rests on. Faith
+      and foresight are allies, not rivals.
+    refs:
+      - ref: Proverbs 6:6–8
+        page: 83
+        note: Consider the ant — no commander, no overseer, and still ready for winter.
+      - ref: Proverbs 21:20
+        page: 84
+        note: Treasure and oil are in the dwelling of the wise; a fool swallows it up.
+      - ref: Proverbs 21:5
+        page: 61
+        note: The plans of the diligent lead to profit; haste leads to poverty.
+      - ref: Luke 14:28
+        page: 62
+        note: Which of you, desiring to build a tower, doesn't first count the cost?
+      - ref: Genesis 41
+        page: 65
+        note: Joseph stores grain through seven years of plenty against seven of famine.
+      - ref: Nehemiah 2
+        page: 63
+        note: Nehemiah inspects the ruined walls by night before he announces anything.
+      - ref: Proverbs 16:3
+        page: 64
+        note: Commit your works to the LORD, and your plans will be established.
+      - ref: Exodus 31:3
+        page: 64
+        note: Bezalel filled with the Spirit of God — skill itself as a gift.
+      - ref: Exodus 36:5
+        page: 64
+        note: The people brought more than enough, and had to be restrained from giving.
+      - ref: Proverbs 31:21
+        page: 85
+        note: She is not afraid of the snow, for her household is clothed in scarlet.
+      - ref: Proverbs 31:25
+        page: 86
+        note: She laughs at the time to come — the posture preparation buys you.
+      - ref: Proverbs 28:20
+        page: 88
+        note: He who hurries to be rich will not go unpunished.
+      - ref: Ecclesiastes 11:2
+        page: 94
+        note: Give a portion to seven, yes, even to eight — the oldest argument for diversifying.
+      - ref: Genesis 32:7–8
+        page: 95
+        note: Jacob divides his camp so that one half survives what the other meets.
+      - ref: Genesis 26:22
+        page: 89
+        note: Isaac digs another well rather than fight for the last one.
+      - ref: Proverbs 1:10–19
+        page: 90
+        note: Do not join those who are greedy for gain; they ambush their own lives.
+      - ref: Daniel 1:8
+        page: 67
+        note: Daniel resolved not to defile himself — a plan made before the pressure arrived.
+
+  - name: Wealth, contentment &amp; the love of money
+    question: Is it wrong that I want more?
+    summary: >-
+      The passages behind the book's answer — that desiring provision is not
+      the sin, and forgetting the Giver is.
+    refs:
+      - ref: 1 Timothy 6:10
+        page: 42
+        note: The love of money is a root of all kinds of evil. Not money; the love of it.
+      - ref: 1 Timothy 6:7
+        page: 32
+        note: We brought nothing into the world, and we can carry nothing out.
+      - ref: 1 Timothy 6:17
+        page: 44
+        note: Do not set your hope on uncertain riches, but on God, who richly provides.
+      - ref: Deuteronomy 8:18
+        page: 4
+        note: Remember the LORD your God, for it is He who gives you the ability to produce wealth.
+      - ref: Ecclesiastes 5:10
+        page: 41
+        note: He who loves silver shall not be satisfied with silver.
+      - ref: Ecclesiastes 2:1–11
+        page: 41
+        note: Solomon denied himself nothing his eyes desired, and called the whole of it vanity.
+      - ref: Philippians 4:11–13
+        page: 42
+        note: I have learned, in whatever state I am, to be content.
+      - ref: Luke 12:15
+        page: 44
+        note: Beware of covetousness; a life does not consist of the abundance of possessions.
+      - ref: Luke 12:16–21
+        page: 32
+        note: The rich fool builds bigger barns the night before he dies.
+      - ref: Luke 17:11–19
+        page: 44
+        note: Ten lepers healed; one turned back. Gratitude as the antidote to more.
+      - ref: Job 1:21
+        page: 43
+        note: The LORD gave, and the LORD has taken away. Blessed be the name of the LORD.
+      - ref: Job 42:10
+        page: 43
+        note: The LORD restored Job's fortunes when he prayed for his friends.
+      - ref: Mark 10:17–27
+        page: 12
+        note: The rich young ruler, who had kept everything except his grip.
+      - ref: Luke 19:1–10
+        page: 13
+        note: Zacchaeus gives half his goods away, unasked.
+      - ref: Matthew 8:20
+        page: 46
+        note: The Son of Man has nowhere to lay his head.
+      - ref: Acts 4:36–37
+        page: 46
+        note: Barnabas sells his field — owned by nothing, and so free to give.
+
+  - name: Work, calling &amp; excellence
+    question: Does my work matter to God?
+    summary: >-
+      Work as worship and witness, and the book's case that the way up in
+      God's economy runs downward.
+    refs:
+      - ref: Colossians 3:23
+        page: 110
+        note: Whatever you do, work heartily, as for the Lord and not for men.
+      - ref: Colossians 3:24
+        page: 115
+        note: You serve the Lord Christ — whoever signs the paycheck.
+      - ref: Daniel 6:4
+        page: 112
+        note: They could find no error or fault in him. Excellence as a defence.
+      - ref: Daniel 6:10
+        page: 113
+        note: Daniel prayed as he had done before — the decree changed nothing.
+      - ref: Daniel 6:26
+        page: 114
+        note: A pagan king decrees reverence for Daniel's God, because of Daniel's work.
+      - ref: Genesis 39:2–3
+        page: 116
+        note: The LORD was with Joseph, and his master saw it in the results.
+      - ref: John 13:1–17
+        page: 116
+        note: Jesus washes feet. The most senior person in the room takes the lowest job.
+      - ref: Luke 16:10
+        page: 118
+        note: He who is faithful in a very little is faithful also in much.
+      - ref: 1 Samuel 16:7
+        page: 119
+        note: Man looks at the outward appearance, but the LORD looks at the heart.
+      - ref: 1 Samuel 17:34–37
+        page: 119
+        note: The lion and the bear — the unwitnessed work that qualified David for the giant.
+      - ref: Luke 2:52
+        page: 119
+        note: Jesus increased in wisdom and stature, and in favour with God and men.
+      - ref: Proverbs 22:29
+        page: 92
+        note: Do you see a man skilled in his work? He will stand before kings.
+
+  - name: Ownership, the heart &amp; realignment
+    question: Whose money is it, and what has it done to me?
+    summary: >-
+      The foundation the rest of the book stands on — that nothing here was
+      ever ours — and the passages on noticing when money has taken the wheel.
+    refs:
+      - ref: Psalm 24:1
+        page: 31
+        note: The earth is the LORD's, with its fullness. Including the paycheck.
+      - ref: Matthew 6:21
+        page: 11
+        note: Where your treasure is, there your heart will be also. The order matters.
+      - ref: Matthew 6:24
+        page: 15
+        note: You cannot serve both God and Mammon.
+      - ref: Genesis 1:28
+        page: 33
+        note: The first job given to humanity was management.
+      - ref: Matthew 25:14–30
+        page: 33
+        note: The talents. Every servant was given something; none of it was theirs.
+      - ref: Romans 14:12
+        page: 146
+        note: Each one of us will give account of himself to God.
+      - ref: Acts 4:32–35
+        page: 36
+        note: No one claimed that anything was his own.
+      - ref: Acts 5:1–11
+        page: 16
+        note: Ananias and Sapphira. The lie, not the amount, was the offence.
+      - ref: John 12:6
+        page: 15
+        note: Judas kept the money bag, and used to steal from it.
+      - ref: Mark 11:12–21
+        page: 19
+        note: The fig tree in full leaf with nothing on it.
+      - ref: Revelation 3:19
+        page: 50
+        note: As many as I love, I reprove and chasten. Conviction as a gift.
+      - ref: Hebrews 12:6
+        page: 51
+        note: The Lord disciplines the one he loves.
+      - ref: 2 Chronicles 32:26
+        page: 51
+        note: Hezekiah humbled himself, and the wrath did not come in his days.
+      - ref: Haggai 1:6
+        page: 53
+        note: He who earns wages, earns wages to put them into a bag with holes.
+      - ref: Psalm 139:23–24
+        page: 53
+        note: Search me, God, and know my heart. The prayer to pray over a bank statement.
+      - ref: Luke 15:11–32
+        page: 53
+        note: The prodigal — the road home was shorter than he feared.
+      - ref: Luke 3:10–14
+        page: 56
+        note: >-
+          "What then shall we do?" Repentance answered in specific, financial terms.
+
+  - name: Legacy, family &amp; what outlasts you
+    question: What am I leaving behind?
+    summary: >-
+      The final step of the book — using what you steward to build something
+      that survives you.
+    refs:
+      - ref: Proverbs 13:22
+        page: 125
+        note: A good man leaves an inheritance to his children's children.
+      - ref: Genesis 17:7
+        page: 128
+        note: An everlasting covenant, to you and to your offspring after you.
+      - ref: Exodus 3:6
+        page: 128
+        note: The God of Abraham, of Isaac, and of Jacob — a name spanning three generations.
+      - ref: 2 Timothy 1:5
+        page: 129
+        note: The faith that lived first in Lois and Eunice, and then in Timothy.
+      - ref: 2 Timothy 3:15
+        page: 130
+        note: From infancy you have known the sacred writings.
+      - ref: 1 Chronicles 29:2
+        page: 129
+        note: David prepared with all his might for a temple he would never see.
+      - ref: 2 Kings 4:8–37
+        page: 133
+        note: The Shunammite woman builds a small room for a prophet, and it changes everything.
+      - ref: 1 Timothy 6:18–19
+        page: 131
+        note: Rich in good works, laying up a good foundation for the time to come.
+      - ref: Matthew 25:23
+        page: 136
+        note: Well done, good and faithful servant. Enter into the joy of your lord.
+      - ref: Matthew 25:25
+        page: 139
+        note: >-
+          "I was afraid, and went away and hid your talent." Fear, not greed, buried it.
+      - ref: Numbers 14:9
+        page: 140
+        note: Ten spies saw giants. Caleb saw the same giants and a bigger God.
+      - ref: Matthew 6:19–20
+        page: 149
+        note: Lay up for yourselves treasures in heaven, where moth and rust do not consume.
+      - ref: 2 Corinthians 4:18
+        page: 149
+        note: The things that are seen are temporal; the unseen are eternal.
+      - ref: Matthew 16:26
+        page: 151
+        note: What good is it to gain the whole world and forfeit your life?
+      - ref: 1 Corinthians 13:3
+        page: 151
+        note: Though I give away all my goods, and have not love, it profits me nothing.
+      - ref: Ruth 2
+        page: 151
+        note: Boaz leaves grain in the field on purpose, for someone he has not met.
+      - ref: Mark 10:45
+        page: 152
+        note: The Son of Man came not to be served, but to serve.
+      - ref: Hebrews 4:13
+        page: 148
+        note: All things are naked and laid open before the eyes of him to whom we must give account.
+      - ref: Matthew 6:33
+        page: 151
+        note: Seek first God's Kingdom and his righteousness, and all these things will be given to you.
