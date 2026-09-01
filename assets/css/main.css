@@ -207,6 +207,64 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .btn--ghost{background:transparent;color:var(--pine);border:1px solid var(--pine)}
 .btn--ghost:hover{background:var(--pine);color:#fff}
 
+/* ---------- landing page ---------- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.lp__col{width:min(100% - 2.2rem,40rem);margin-inline:auto}
+.lp__hero{background:var(--pine-deep);color:#F3F1E8;padding-block:2.4rem 3.2rem;
+  position:relative;overflow:hidden}
+.lp__hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(110% 75% at 80% 10%,rgba(217,178,78,.17),transparent 62%)}
+.lp__hero > *{position:relative;z-index:1}
+.lp__brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
+  margin-bottom:2.2rem}
+.lp__brand b{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;
+  color:#fff;letter-spacing:-.015em}
+.lp__eyebrow{color:var(--brass-lt);display:block;margin-bottom:.9rem}
+.lp__hero h1{font-size:clamp(1.85rem,1.35rem+2.3vw,2.9rem);font-weight:600;color:#fff}
+.lp__sub{margin:1.1rem 0 0;color:#CFD8D2;font-size:1.05rem;line-height:1.6}
+.lp__form{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.7rem}
+.lp__form input{flex:1 1 15rem;padding:.85rem .95rem;border:0;font:inherit;
+  font-size:.95rem;color:var(--ink);background:#fff}
+.lp__form input:focus{outline:2px solid var(--brass);outline-offset:2px}
+.lp__form button{padding:.85rem 1.5rem;border:0;background:var(--brass);color:#12211D;
+  font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:.9rem;
+  cursor:pointer;transition:background .14s}
+.lp__form button:hover{background:var(--brass-lt)}
+.lp__form.is-inert{opacity:.62}
+.lp__form.is-inert button{cursor:not-allowed}
+.lp__privacy{margin:.9rem 0 0;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.78rem;line-height:1.55;color:#9FB6AD}
+
+.lp__inside{padding-block:3rem}
+.lp__inside h2{font-size:clamp(1.3rem,1.1rem+.8vw,1.6rem);font-weight:600;
+  margin-bottom:1.2rem}
+.lp__list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.lp__list li{display:grid;gap:.15rem;padding-block:.95rem;
+  border-top:1px solid var(--rule)}
+.lp__list li:last-child{border-bottom:1px solid var(--rule)}
+@media(min-width:38rem){
+  .lp__list li{grid-template-columns:13rem 1fr;gap:1.2rem;align-items:baseline}
+}
+.lp__topic{font-family:"Fraunces",Georgia,serif;font-size:1.04rem;font-weight:600;
+  letter-spacing:-.015em}
+.lp__refs{font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;color:var(--brass);
+  letter-spacing:.02em;line-height:1.5}
+
+.lp__trust{padding-block:2.4rem;border-top:1px solid var(--rule);
+  background:#fff}
+.lp__trust .label{color:var(--brass);display:block;margin-bottom:.7rem}
+.lp__trust p{margin:0;font-size:.93rem;color:var(--stone);line-height:1.6}
+.lp__trust em{font-style:italic;color:var(--ink)}
+
+.lp__close{background:var(--pine);color:#EDF2EF;padding-block:3rem}
+.lp__close h2{font-size:clamp(1.4rem,1.15rem+1vw,1.9rem);font-weight:600;color:#fff}
+.lp__close .lp__sub{color:#BDD0C9;font-size:.98rem}
+
+.lp__foot{padding-block:2rem 3rem;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.78rem;color:var(--stone)}
+.lp__foot p{margin:0 0 .5rem}
+
 /* ---------- sign-in ---------- */
 .auth{min-height:100vh;display:grid;align-content:center;justify-items:center;
   gap:1.6rem;padding:2.5rem 1.1rem 3rem;background:var(--paper)}

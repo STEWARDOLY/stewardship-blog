@@ -274,3 +274,54 @@ login:
   help_text: Trouble signing in?
   help_url: /about/
   action: ""
+
+# ---------------------------------------------------------------------------
+# Landing page (/scripture-index/)
+#
+# A single-purpose conversion page for the Scripture Index lead magnet.
+# One promise, one field, one button, no navigation.
+#
+# Per the audience analysis: this reader needs permission before tactics, so
+# the book is not pitched above the ask. The privacy line names their actual
+# fear — being seen by their church — rather than saying "we value privacy".
+#
+# `action` must point at an email provider endpoint. While blank the form
+# renders disabled rather than collecting addresses that go nowhere.
+# ---------------------------------------------------------------------------
+landing:
+  eyebrow: Free · One page · No sign-in
+  heading: The money questions you can't ask at church — and the passages that answer them.
+  sub: >-
+    The Stewardship Scripture Index gathers every passage on money in Scripture
+    and sorts it by what you are actually facing. Not by book and chapter — by
+    debt, giving, worry, provision, and work.
+  placeholder: you@example.com
+  button: Send me the index
+  privacy: >-
+    One email, then the index. We never sell or share your address, and nothing
+    you read here is ever visible to anyone at your church.
+  inside_heading: What's inside
+  inside:
+    - topic: Debt &amp; borrowing
+      refs: Proverbs 22:7 · Leviticus 25 · Nehemiah 5
+    - topic: Giving &amp; the tithe
+      refs: Genesis 14:20 · Proverbs 3:9 · 2 Corinthians 8–9
+    - topic: Worry &amp; provision
+      refs: Matthew 6:25–33 · Philippians 4:6 · 1 Kings 17
+    - topic: Saving &amp; planning
+      refs: Proverbs 6:6–8 · Proverbs 21:20 · Luke 14:28
+    - topic: Work &amp; earning
+      refs: Deuteronomy 8:18 · Colossians 3:23
+    - topic: Wealth &amp; contentment
+      refs: Ecclesiastes 5:10 · 1 Timothy 6:6–10
+  trust_heading: Why trust it
+  trust: >-
+    Compiled by Rowan Rivers, author of <em>Financial Freedom Through Godly
+    Stewardship</em>, who lost ninety percent of a life's savings before
+    learning to steward the rest. Every reference is quoted from the World
+    English Bible, which is in the public domain, so you can check all of it.
+  closing_heading: You were not made to carry this quietly.
+  closing: >-
+    The index is one page. It costs nothing, it asks nothing of you beyond an
+    address, and you can read it without telling anyone you needed it.
+  action: ""

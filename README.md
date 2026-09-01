@@ -81,3 +81,18 @@ rather than collecting an address that goes nowhere.
 
 Pages with `minimal: true` in their front matter render without the masthead
 and footer, to reduce exit points.
+
+## The landing page (`/scripture-index/`)
+
+A single-purpose conversion page for the Scripture Index lead magnet: one
+promise, one field, one button, no navigation. Driven by the `landing` block
+in `_config.yml`.
+
+The book is deliberately not pitched above the ask. Per the audience analysis,
+this reader needs permission before tactics and reacts badly to being sold to
+while raw — so the page asks for an email and nothing else.
+
+Set `landing.action` to your email provider's form endpoint to activate it.
+Until then both forms render disabled rather than collecting addresses that go
+nowhere. To repoint the page at the book instead of the index, the copy is all
+in the `landing` block — no template changes needed.

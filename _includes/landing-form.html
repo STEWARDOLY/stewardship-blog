@@ -1,0 +1,15 @@
+{%- if site.landing.action and site.landing.action != '' %}
+<form class="lp__form" action="{{ site.landing.action }}" method="post">
+  <label class="sr-only" for="{{ include.id }}">Email address</label>
+  <input id="{{ include.id }}" type="email" name="email" required autocomplete="email"
+         placeholder="{{ site.landing.placeholder }}">
+  <button type="submit">{{ site.landing.button }}</button>
+</form>
+{%- else %}
+<form class="lp__form is-inert" onsubmit="return false">
+  <label class="sr-only" for="{{ include.id }}">Email address</label>
+  <input id="{{ include.id }}" type="email" placeholder="{{ site.landing.placeholder }}"
+         aria-label="Email address" disabled>
+  <button type="submit" disabled>{{ site.landing.button }}</button>
+</form>
+{%- endif %}
