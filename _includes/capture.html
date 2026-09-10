@@ -1,21 +1,33 @@
-<section class="capture">
+{%- comment -%}
+  Email capture. Params (all optional):
+    id      — unique per instance on a page; required if used more than once
+    heading — overrides site.capture.heading
+    body    — overrides site.capture.body
+    variant — "slim" for a single-line strip inside a page
+{%- endcomment -%}
+{%- assign cid = include.id | default: 'capture' -%}
+{%- assign chead = include.heading | default: site.capture.heading -%}
+{%- assign cbody = include.body | default: site.capture.body -%}
+<section class="capture{% if include.variant == 'slim' %} capture--slim{% endif %}">
   <div class="wrap">
     <div class="capture__box">
-      <h2>{{ site.capture.heading }}</h2>
-      <p>{{ site.capture.body }}</p>
+      <h2>{{ chead }}</h2>
+      <p>{{ cbody }}</p>
       {%- if site.capture.action and site.capture.action != '' %}
       <form action="{{ site.capture.action }}" method="post">
-        <input type="email" name="email" required
-               placeholder="{{ site.capture.placeholder }}" aria-label="Email address">
+        <label class="sr-only" for="{{ cid }}-email">Email address</label>
+        <input id="{{ cid }}-email" type="email" name="email" required
+               autocomplete="email" placeholder="{{ site.capture.placeholder }}">
         <button type="submit">{{ site.capture.button }}</button>
       </form>
       {%- else %}
-      <form class="is-inert" aria-describedby="capture-note" onsubmit="return false">
-        <input type="email" placeholder="{{ site.capture.placeholder }}"
-               aria-label="Email address" disabled>
+      <form class="is-inert" aria-describedby="{{ cid }}-note" onsubmit="return false">
+        <label class="sr-only" for="{{ cid }}-email">Email address</label>
+        <input id="{{ cid }}-email" type="email" placeholder="{{ site.capture.placeholder }}"
+               disabled>
         <button type="submit" disabled>{{ site.capture.button }}</button>
       </form>
-      <p id="capture-note" class="capture__note">
+      <p id="{{ cid }}-note" class="capture__note">
         Set <code>capture.action</code> in <code>_config.yml</code> to activate this form.
       </p>
       {%- endif %}

@@ -310,6 +310,17 @@ landing:
 # Content lives in _data/scripture_index.yml
 # ---------------------------------------------------------------------------
 scripture_index:
+  # Shown on the index page itself, where the reader can already see the whole
+  # thing. The offer is a copy to keep, never a gate on reading it.
+  capture_top_heading: Would you rather have this by email?
+  capture_top_body: >-
+    The whole index is on this page, free, and it always will be. If you would
+    rather keep a copy, print it, or read it away from a screen, we will send
+    it to you.
+  capture_end_heading: Keep a copy of the index
+  capture_end_body: >-
+    You have read the whole thing. If it would help to have it on hand next
+    time the question comes up, we will email it.
   label: Free · One page · No sign-in
   heading: The Stewardship Scripture Index
   sub: >-

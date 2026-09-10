@@ -9,6 +9,10 @@ layout: default
   </div>
 </section>
 
+{% include capture.html id="cap-index-top" variant="slim"
+   heading=site.scripture_index.capture_top_heading
+   body=site.scripture_index.capture_top_body %}
+
 <main class="wrap si">
   <nav class="si__toc" aria-label="Situations">
     {%- for sec in site.data.scripture_index.sections %}
@@ -35,3 +39,7 @@ layout: default
 
   <p class="si__foot">{{ site.scripture_index.note }}</p>
 </main>
+
+{% include capture.html id="cap-index-end"
+   heading=site.scripture_index.capture_end_heading
+   body=site.scripture_index.capture_end_body %}
