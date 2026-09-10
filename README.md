@@ -130,3 +130,17 @@ blurb does not contain ("credit card", "emergency", "rent").
 restores the full list. A reader who typed their real problem and got "no
 results" is worse off than one who was never offered a box — keep that
 behaviour if you change this file.
+
+### Intent chips
+
+`_data/intents.yml` holds one-tap chips per topic, written in the reader's own
+voice — the same register as the front-page question bubbles. They exist
+because this site's reader often cannot name their problem in search terms,
+which is the premise of the book.
+
+Each chip carries a `query` of keyword soup that drives the same ranking
+engine as the search box. **It is never shown to the reader** — the chip shows
+their words, the matching uses ours. Typing always overrides an active chip.
+
+Keep to three or four per topic; more reads as a menu and defeats the point.
+A topic with no entry renders the search box without chips.

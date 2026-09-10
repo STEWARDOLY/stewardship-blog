@@ -40,11 +40,25 @@
     so a reader without JavaScript sees the plain list rather than a dead box.
   {%- endcomment %}
   <div class="nsfilter" data-nsfilter hidden>
-    <label class="nsfilter__label" for="nsq-{{ topic }}">{{ site.next_step.filter_label }}</label>
-    <input class="nsfilter__input" id="nsq-{{ topic }}" type="search" autocomplete="off"
-           placeholder="{{ site.next_step.filter_placeholder }}" data-nsinput>
-    <button class="nsfilter__chip" type="button" data-nsfree aria-pressed="false">Free only</button>
-    <button class="nsfilter__clear" type="button" data-nsclear hidden>Clear</button>
+    <p class="nsfilter__label" id="nsl-{{ topic }}">{{ site.next_step.filter_label }}</p>
+
+    {%- assign intents = site.data.intents[topic] -%}
+    {%- if intents %}
+    <div class="intents" role="group" aria-labelledby="nsl-{{ topic }}">
+      {%- for intent in intents %}
+      <button class="intent" type="button" aria-pressed="false"
+              data-nsintent data-query="{{ intent.query | escape_once }}">{{ intent.label }}</button>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <div class="nsfilter__row">
+      <label class="sr-only" for="nsq-{{ topic }}">{{ site.next_step.filter_label }}</label>
+      <input class="nsfilter__input" id="nsq-{{ topic }}" type="search" autocomplete="off"
+             placeholder="{{ site.next_step.filter_placeholder }}" data-nsinput>
+      <button class="nsfilter__chip" type="button" data-nsfree aria-pressed="false">Free only</button>
+      <button class="nsfilter__clear" type="button" data-nsclear hidden>Clear</button>
+    </div>
   </div>
 
   <p class="nsfilter__status" data-nsstatus role="status" hidden></p>

@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Intent chips for the "Where to go next" panel.
+#
+# One tap instead of typing. Written in the reader's own voice — the same
+# register as the question bubbles on the front page — because the reader this
+# site is built for often cannot name their problem in search terms. That is
+# the whole premise of the book.
+#
+# Rules of thumb when editing:
+#   - first person, plain words, the way someone would actually say it
+#   - a need, not a topic ("I'm behind on payments", not "Debt management")
+#   - three or four per topic; more reads as a menu and defeats the purpose
+#   - `query` is keyword soup fed to the ranking engine. It is never shown,
+#     so stuff it with every term that should match.
+#
+# Keys must match pillar filenames. A topic with no entry here simply renders
+# the search box without chips.
+# ---------------------------------------------------------------------------
+
+debt-borrowing:
+  - label: I'm behind on payments
+    query: credit card collections behind payments creditor bankruptcy counselling
+  - label: I want a plan to get out
+    query: budget plan payoff coaching calculator free debt
+  - label: Just show me the passages
+    query: verses passages scripture index reference lookup
+
+anxiety-provision:
+  - label: I can't cover this month
+    query: emergency rent food bills help urgent church benevolence
+  - label: I'm frightened about money
+    query: reading plan devotional study worry provision daily
+  - label: Just show me the passages
+    query: verses passages scripture index reference lookup
+
+tithing-giving:
+  - label: I don't know how much to give
+    query: study course giving generosity tithe small group
+  - label: Is this ministry trustworthy?
+    query: charity donate ministry accountability check giving
+  - label: I want to study this properly
+    query: commentary greek hebrew original language study books bibles
+
+budgeting-saving:
+  - label: I want to start budgeting
+    query: budget app tracking spending envelope paycheck
+  - label: I'd rather not pay for a tool
+    query: free budget app tracking ministry calculator
+  - label: Just show me the passages
+    query: verses passages scripture index reference lookup
+
+wealth-prosperity:
+  - label: Is wanting more wrong?
+    query: study books wealth contentment generosity
+  - label: I want to give from what I have
+    query: charity donate ministry accountability giving check
+  - label: I want to study this properly
+    query: commentary greek hebrew original language study bibles
+
+marriage-family:
+  - label: We fight about money
+    query: small group study couples course guides
+  - label: We want to budget together
+    query: budget app free tracking spending
+  - label: I want to teach my children
+    query: study guides books family small group
