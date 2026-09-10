@@ -1,0 +1,64 @@
+{%- comment -%}
+  Contextual resource panel — the "next step" for a reader on this topic.
+  Params: topic (pillar slug), state (reader_state), heading (optional)
+
+  Commercial resources are withheld entirely from pages where the reader is
+  likely to be raw. That rule is the whole point; do not soften it.
+
+  Two passes rather than array-building, because Jekyll's Liquid has no push.
+{%- endcomment -%}
+{%- assign topic = include.topic -%}
+{%- assign state = include.state | default: 'steady' -%}
+
+{%- assign shown = 0 -%}
+{%- assign paid = 0 -%}
+{%- for r in site.data.resources.resources -%}
+  {%- if r.topics contains topic -%}
+    {%- unless state == 'raw' and r.stance == 'commercial' -%}
+      {%- assign shown = shown | plus: 1 -%}
+      {%- if r.affiliate == 'amazon' and site.affiliates.amazon_tag != '' -%}
+        {%- assign paid = paid | plus: 1 -%}
+      {%- endif -%}
+      {%- if r.affiliate == 'generic' and site.affiliates.generic_ref != '' -%}
+        {%- assign paid = paid | plus: 1 -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if shown > 0 %}
+<aside class="nextstep" aria-labelledby="nextstep-h">
+  <p class="label nextstep__label">{{ site.next_step.label }}</p>
+  <h2 id="nextstep-h" class="nextstep__h">{{ include.heading | default: 'Useful from here' }}</h2>
+
+  {%- if state == 'raw' %}
+  <p class="nextstep__care">{{ site.next_step.care_note }}</p>
+  {%- endif %}
+
+  <ul class="nextstep__list">
+    {%- for r in site.data.resources.resources -%}
+      {%- if r.topics contains topic -%}
+        {%- unless state == 'raw' and r.stance == 'commercial' %}
+    <li class="res">
+      <span class="res__kind">{{ r.kind }}</span>
+      {%- if r.internal %}
+      <a class="res__name" href="{% include affiliate-link.html resource=r %}">{{ r.name }}</a>
+      {%- else %}
+      {%- assign is_paid = false -%}
+      {%- if r.affiliate == 'amazon' and site.affiliates.amazon_tag != '' %}{% assign is_paid = true %}{% endif -%}
+      {%- if r.affiliate == 'generic' and site.affiliates.generic_ref != '' %}{% assign is_paid = true %}{% endif %}
+      <a class="res__name" href="{% include affiliate-link.html resource=r %}"
+         target="_blank" rel="noopener{% if is_paid %} sponsored{% endif %}">{{ r.name }}<span class="res__ext" aria-hidden="true">&#8599;</span></a>
+      {%- endif %}
+      <span class="res__blurb">{{ r.blurb }}</span>
+    </li>
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor %}
+  </ul>
+
+  {%- if paid > 0 %}
+  <p class="nextstep__disclosure">{{ site.affiliates.disclosure }}</p>
+  {%- endif %}
+</aside>
+{%- endif -%}

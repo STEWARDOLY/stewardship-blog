@@ -1,0 +1,17 @@
+{%- comment -%}
+  Appends the right tracking parameter to a resource URL at render time, so
+  the raw URLs in _data/resources.yml stay clean and tags live in _config.yml.
+  Outputs the finished href only. Params: resource
+{%- endcomment -%}
+{%- assign r = include.resource -%}
+{%- if r.internal -%}
+  {{ r.url | relative_url }}
+{%- elsif r.affiliate == 'amazon' and site.affiliates.amazon_tag != '' -%}
+  {%- if r.url contains '?' -%}{{ r.url }}&tag={{ site.affiliates.amazon_tag }}
+  {%- else -%}{{ r.url }}?tag={{ site.affiliates.amazon_tag }}{%- endif -%}
+{%- elsif r.affiliate == 'generic' and site.affiliates.generic_ref != '' -%}
+  {%- if r.url contains '?' -%}{{ r.url }}&ref={{ site.affiliates.generic_ref }}
+  {%- else -%}{{ r.url }}?ref={{ site.affiliates.generic_ref }}{%- endif -%}
+{%- else -%}
+  {{ r.url }}
+{%- endif -%}

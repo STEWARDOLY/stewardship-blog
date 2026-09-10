@@ -92,3 +92,24 @@ Sourced from the book's own Scripture Index (pp. 160–165), mapped to the
 chapter each reference is discussed in. **If a passage is not in the book, it
 is not in this index** — keep it that way, since the page's whole promise is
 that every line is checkable.
+
+## Contextual resources (the "next step" panel)
+
+Modelled on Stay22's pattern: monetise intent the reader already has by
+offering a genuinely useful next step, rather than serving an ad.
+
+- `_data/resources.yml` holds the resources, each tagged with `topics` (pillar
+  slugs) and a `stance` of `free` or `commercial`.
+- Each pillar carries `reader_state: raw | steady | planning` in its front
+  matter.
+- **On `raw` pages (debt, anxiety) every commercial resource is withheld** and
+  a care note replaces it. This is the rule that makes the pattern safe on a
+  site about money shame — do not soften it.
+
+Affiliate tags live only in `_config.yml` (`affiliates.amazon_tag`,
+`affiliates.generic_ref`); `_includes/affiliate-link.html` appends them at
+render time so the URLs in the data file stay clean. Leave a tag blank and
+those links render bare.
+
+Paid links get `rel="noopener sponsored"`, and the FTC disclosure renders
+automatically in any panel containing at least one paid link — and only then.

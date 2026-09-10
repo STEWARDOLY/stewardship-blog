@@ -1,0 +1,130 @@
+# ---------------------------------------------------------------------------
+# Contextual resources — the "next step" offered on each topic page.
+#
+# The Stay22 pattern adapted: match a resource to the intent the reader
+# already has, rather than serving an ad. A reader on the saving page is
+# planning; a reader on the debt page is frightened. They do not get the
+# same treatment.
+#
+# stance:
+#   free       — costs the reader nothing. Safe on any page.
+#   commercial — costs money and/or pays a commission. Only rendered on pages
+#                whose pillar has reader_state: steady or planning.
+#
+# affiliate:
+#   amazon  — the Amazon Associates tag from _config.yml is appended
+#   generic — the generic ref parameter is appended
+#   (omit)  — plain link, no tracking, never counted as a paid link
+#
+# topics: must match pillar filenames (the part before .md).
+# ---------------------------------------------------------------------------
+
+resources:
+  # --- The author's own work -----------------------------------------------
+  - name: Financial Freedom Through Godly Stewardship
+    kind: Book
+    blurb: >-
+      The whole path in three steps and twelve chapters, with reflection
+      questions and a devotional prayer at the end of each.
+    url: https://www.amazon.com/dp/B0HCC69G7V
+    affiliate: amazon
+    stance: commercial
+    topics: [tithing-giving, budgeting-saving, wealth-prosperity, marriage-family]
+
+  # --- Free, always safe ---------------------------------------------------
+  - name: The Stewardship Scripture Index
+    kind: Free guide
+    blurb: >-
+      Every passage on money in Scripture, sorted by what you are facing rather
+      than by book and chapter.
+    url: /scripture-index/
+    internal: true
+    stance: free
+    topics: [tithing-giving, debt-borrowing, anxiety-provision, wealth-prosperity, budgeting-saving, marriage-family]
+
+  - name: Bible Gateway
+    kind: Free tool
+    blurb: >-
+      Read any passage cited here in full, in the World English Bible or any
+      translation you prefer.
+    url: https://www.biblegateway.com/
+    stance: free
+    topics: [tithing-giving, debt-borrowing, anxiety-provision, wealth-prosperity, budgeting-saving, marriage-family]
+
+  - name: YouVersion Bible App
+    kind: Free app
+    blurb: >-
+      Reading plans you can keep to in a few minutes a day, including plans on
+      money and provision.
+    url: https://www.bible.com/
+    stance: free
+    topics: [anxiety-provision, tithing-giving, marriage-family]
+
+  # --- Debt: free help only ------------------------------------------------
+  - name: National Foundation for Credit Counseling
+    kind: Non-profit help
+    blurb: >-
+      Non-profit credit counsellors. An initial counselling session is free,
+      and they are not lenders — they do not profit from your debt.
+    url: https://www.nfcc.org/
+    stance: free
+    topics: [debt-borrowing]
+
+  - name: Find a debt charity near you
+    kind: Non-profit help
+    blurb: >-
+      If you are outside the US, search for a non-profit debt charity in your
+      country before you speak to anyone who sells a product.
+    url: https://www.google.com/search?q=non-profit+debt+advice+charity
+    stance: free
+    topics: [debt-borrowing]
+
+  # --- Anxiety: free support only ------------------------------------------
+  - name: Your church's benevolence fund
+    kind: Ask locally
+    blurb: >-
+      Most congregations keep a fund for exactly this and almost never
+      advertise it. Asking is not a failure of faith.
+    url: /anxiety-provision/
+    internal: true
+    stance: free
+    topics: [anxiety-provision]
+
+  # --- Planning-stage readers ----------------------------------------------
+  - name: YNAB
+    kind: Budgeting tool
+    blurb: >-
+      A budgeting method built on giving every dollar a job — the closest
+      common tool to what the planning chapters describe.
+    url: https://www.ynab.com/
+    affiliate: generic
+    stance: commercial
+    topics: [budgeting-saving]
+
+  - name: EveryDollar
+    kind: Budgeting tool
+    blurb: >-
+      A free budgeting tier that is enough for most households, with a paid
+      version you do not need to start.
+    url: https://www.everydollar.com/
+    stance: free
+    topics: [budgeting-saving, marriage-family]
+
+  - name: Logos Bible Software
+    kind: Study tool
+    blurb: >-
+      For readers who want to go past the citation into the commentary and the
+      original languages.
+    url: https://www.logos.com/
+    affiliate: generic
+    stance: commercial
+    topics: [wealth-prosperity, tithing-giving]
+
+  - name: ECFA member search
+    kind: Free tool
+    blurb: >-
+      Check whether a ministry you are giving to is accredited for financial
+      accountability before you give.
+    url: https://www.ecfa.org/
+    stance: free
+    topics: [tithing-giving, wealth-prosperity]

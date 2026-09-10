@@ -11,4 +11,7 @@ layout: default
 
 <main class="wrap prose">
   {{ content }}
+
+  {%- assign slug = page.path | split: '/' | last | split: '.' | first %}
+  {% include next-step.html topic=slug state=page.reader_state %}
 </main>

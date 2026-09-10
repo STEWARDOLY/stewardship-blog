@@ -3,6 +3,7 @@ title: "Anxiety &amp; provision"
 nav_title: "Anxiety"
 order: 3
 question_count: 7
+reader_state: raw
 blurb: >-
   Financial fear, daily bread, praying about money, paycheck to paycheck.
 ---

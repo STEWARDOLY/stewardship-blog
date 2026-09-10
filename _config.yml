@@ -1,5 +1,5 @@
-# ---------------------------------------------------------------------------
-# Stewardship Journeys — site configuration
+﻿# ---------------------------------------------------------------------------
+# Stewardship Journeys ??site configuration
 # All homepage copy lives here or in the _pillars collection. Templates in
 # _layouts/ and _includes/ read from this file; none of it is hard-coded.
 #
@@ -49,14 +49,14 @@ nav:
       url: /about/
 
 # ---------------------------------------------------------------------------
-# Hero — leads with the reader's felt problem, not the site's mission.
+# Hero ??leads with the reader's felt problem, not the site's mission.
 # Questions are from the book's Introduction.
 # ---------------------------------------------------------------------------
 hero:
-  label: Biblical wisdom · practical money
+  label: Biblical wisdom 繚 practical money
   heading: The money questions you don't ask out loud at church.
   # Rendered as a chat thread of bubbles, alternating sides in order.
-  # Keep each one short — a bubble should never wrap past two lines.
+  # Keep each one short ??a bubble should never wrap past two lines.
   questions:
     - Is it a sin to be in debt?
     - Can I stop tithing while I pay off debt?
@@ -67,10 +67,10 @@ hero:
   cta_text: Start with your question
   cta_url: "#ledger"
   # Small trust line under the button.
-  trust: Free to read · No sign-in · Scripture cited on every page
+  trust: Free to read 繚 No sign-in 繚 Scripture cited on every page
 
 # ---------------------------------------------------------------------------
-# Mindsets — the self-identification section. Adapted from the Introduction,
+# Mindsets ??the self-identification section. Adapted from the Introduction,
 # "Money Is Not Just a Financial Issue -- It's a Spiritual One".
 # This sits directly under the hero so a reader meets their own problem first.
 # ---------------------------------------------------------------------------
@@ -91,7 +91,7 @@ mindsets:
       claim: "It all depends on me."
       body: >-
         You carry your family's whole future on your shoulders, paralysed by
-        the fear of one wrong move. You are exhausted — not from working hard,
+        the fear of one wrong move. You are exhausted ??not from working hard,
         but from carrying what was never yours alone.
       icon: icon-self-reliance.svg
       url: /anxiety-provision/
@@ -123,7 +123,7 @@ ledger:
     - ref: Proverbs 22:7
       question: Is it a sin to be in debt?
       url: /debt-borrowing/
-    - ref: Proverbs 6:6–8
+    - ref: Proverbs 6:6??
       question: Is saving money a lack of faith?
       url: /budgeting-saving/
     - ref: Philippians 4:6
@@ -138,12 +138,12 @@ howto:
     No. The verse people are remembering is 1 Timothy 6:10, and it says the
     <em>love</em> of money is <em>a</em> root of <em>all kinds</em> of evil.
   note: >-
-    The answer comes first, in full, before any explanation — so you get what
+    The answer comes first, in full, before any explanation ??so you get what
     you needed in ten seconds, and so search engines and AI assistants can
     quote it accurately.
 
 # ---------------------------------------------------------------------------
-# The three-step journey — the book's spine, used here as a visual anchor.
+# The three-step journey ??the book's spine, used here as a visual anchor.
 # ---------------------------------------------------------------------------
 journey:
   label: The path these answers sit on
@@ -161,7 +161,7 @@ journey:
     - name: Apply God's Wisdom
       theme: Discipline &amp; strategy
       body: >-
-        Budgeting, saving, giving, investing — the practical disciplines, each
+        Budgeting, saving, giving, investing ??the practical disciplines, each
         rooted in Scripture rather than in a guru's system.
     - name: Build for Eternity
       theme: Purpose &amp; legacy
@@ -169,7 +169,7 @@ journey:
         Live with purpose and make an impact that outlives your bank account.
 
 # ---------------------------------------------------------------------------
-# Author story — the strongest trust signal on the page. Quoted from the
+# Author story ??the strongest trust signal on the page. Quoted from the
 # book's Preface. Specificity is what makes this work; do not smooth it out.
 # ---------------------------------------------------------------------------
 story:
@@ -220,7 +220,7 @@ book:
 capture:
   heading: The Stewardship Scripture Index
   body: >-
-    Every passage on money in Scripture, sorted by what you're facing — debt,
+    Every passage on money in Scripture, sorted by what you're facing ??debt,
     giving, worry, provision, work. Free, one page, no sign-in to read it.
   placeholder: you@example.com
   button: Send me the index
@@ -241,7 +241,7 @@ footer_notes:
     professional who knows your situation.
 
 # ---------------------------------------------------------------------------
-# Audience spectrum — from the target-audience analysis.
+# Audience spectrum ??from the target-audience analysis.
 # Corrects the assumption that this site is only for people in financial
 # trouble. The book addresses the whole range.
 # ---------------------------------------------------------------------------
@@ -252,7 +252,7 @@ spectrum:
     You may be burdened by having too little money, or by money having too much
     control over you, or you may be doing well and sensing a call to something
     deeper. All three belong here.
-  left: Too little of it — debt, scarcity, paycheck to paycheck
+  left: Too little of it ??debt, scarcity, paycheck to paycheck
   middle: Comfortable, but money is quietly running the decisions
   right: Doing well, and sensing God calling you deeper
   stops:
@@ -261,7 +261,7 @@ spectrum:
     - label: Control
       note: Money is the thing setting your calendar
     - label: Calling
-      note: Provision is not the problem — purpose is
+      note: Provision is not the problem ??purpose is
 
 # ---------------------------------------------------------------------------
 # Landing page (/start/)
@@ -274,25 +274,25 @@ spectrum:
 # so it can never drift from the actual index.
 # ---------------------------------------------------------------------------
 landing:
-  eyebrow: Biblical wisdom · practical money
+  eyebrow: Biblical wisdom 繚 practical money
   heading: The money questions you don't ask out loud at church.
   cta_text: Start with your question
   cta_url: "#topics"
-  trust: Free to read · No sign-in · Scripture cited on every page
+  trust: Free to read 繚 No sign-in 繚 Scripture cited on every page
 
   # The Scripture Index call to action
   index_label: The free companion
   index_heading: The Stewardship Scripture Index
   index_sub: >-
     Every passage on money in Scripture, re-sorted out of book-and-chapter
-    order into the situation you are actually in — debt, worry, giving,
+    order into the situation you are actually in ??debt, worry, giving,
     planning, work, legacy.
   placeholder: you@example.com
   button: Send me the index
   privacy: >-
     One email, then the index. We never sell or share your address, and nothing
     you read here is ever visible to anyone at your church.
-  read_now: Or read the whole index now — no email needed
+  read_now: Or read the whole index now ??no email needed
   read_now_url: /scripture-index/
 
   inside_label: What's inside
@@ -308,7 +308,7 @@ landing:
 # Content lives in _data/scripture_index.yml
 # ---------------------------------------------------------------------------
 scripture_index:
-  label: Free · One page · No sign-in
+  label: Free 繚 One page 繚 No sign-in
   heading: The Stewardship Scripture Index
   sub: >-
     Every passage on money quoted or referenced in <em>Financial Freedom
@@ -317,3 +317,32 @@ scripture_index:
   note: >-
     Scripture quotations and references follow the World English Bible, which
     is in the public domain, so every line here is yours to check.
+
+# ---------------------------------------------------------------------------
+# Contextual resources ("next step" panels)
+#
+# The Stay22 pattern: monetise intent the reader already has, by offering a
+# genuinely useful next step at the moment they need it ??never a banner.
+#
+# Affiliate tags are appended at render time by _includes/affiliate-link.html,
+# so the raw URLs in _data/resources.yml stay clean and the tag lives in one
+# place. Leave a tag blank and its links render bare, with no disclosure shown.
+# ---------------------------------------------------------------------------
+affiliates:
+  # Amazon Associates tracking id, e.g. "stewardship-20".
+  amazon_tag: ""
+  # Appended as ?ref= or &ref= for non-Amazon partners that use it.
+  generic_ref: ""
+  # FTC requires a clear, conspicuous disclosure wherever paid links appear.
+  # This renders inside any panel that contains at least one paid link.
+  disclosure: >-
+    Some links here earn this site a commission at no extra cost to you. They
+    are chosen because they are useful, never because they pay.
+
+next_step:
+  label: Where to go next
+  # Shown when a topic is flagged as one where the reader is likely raw.
+  # Those pages get free resources only ??see reader_state in each pillar.
+  care_note: >-
+    Nothing on this page is sold to you. If money is the reason you are
+    reading, you should not have to spend any to get help.

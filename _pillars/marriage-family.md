@@ -3,6 +3,7 @@ title: "Marriage &amp; family"
 nav_title: "Marriage"
 order: 6
 question_count: 6
+reader_state: steady
 blurb: >-
   Conflict between spouses, joint accounts, lending to relatives, teaching children.
 ---

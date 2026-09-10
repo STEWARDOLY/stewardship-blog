@@ -378,6 +378,33 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .si__foot{margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid var(--rule);
   font-size:.85rem;color:var(--stone);max-width:38rem}
 
+/* ---------- contextual next step ---------- */
+.nextstep{margin-top:3rem;padding:1.6rem 1.7rem 1.4rem;background:#fff;
+  border:1px solid var(--rule);border-top:3px solid var(--brass)}
+.nextstep__label{color:var(--brass);display:block;margin-bottom:.5rem}
+.nextstep__h{font-size:1.25rem;font-weight:600;margin-bottom:.9rem}
+.nextstep__care{margin:0 0 1.1rem;padding-left:.9rem;
+  border-left:3px solid var(--pine);font-size:.88rem;color:var(--stone);
+  line-height:1.55}
+.nextstep__list{list-style:none;margin:0;padding:0}
+.res{display:grid;gap:.2rem;padding-block:.95rem;border-top:1px solid var(--rule)}
+.res:first-child{border-top:0;padding-top:0}
+@media(min-width:40rem){
+  .res{grid-template-columns:8rem 1fr;gap:.2rem 1.2rem;align-items:baseline}
+  .res__kind{grid-row:span 2}
+}
+.res__kind{font-family:"IBM Plex Sans",sans-serif;font-size:.64rem;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--stone)}
+.res__name{font-family:"Fraunces",Georgia,serif;font-size:1.05rem;font-weight:600;
+  letter-spacing:-.015em;color:var(--pine);text-decoration:none;
+  border-bottom:1px solid transparent;justify-self:start}
+.res__name:hover{border-bottom-color:var(--brass)}
+.res__ext{font-size:.72em;color:var(--brass);margin-left:.15em}
+.res__blurb{font-size:.88rem;color:var(--stone);line-height:1.55}
+.nextstep__disclosure{margin:1.2rem 0 0;padding-top:.9rem;
+  border-top:1px solid var(--rule);font-family:"IBM Plex Sans",sans-serif;
+  font-size:.74rem;line-height:1.5;color:var(--stone)}
+
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--rule);padding-block:2rem 3rem;
   font-family:"IBM Plex Sans",sans-serif;font-size:.82rem;color:var(--stone)}
