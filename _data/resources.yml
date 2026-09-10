@@ -26,6 +26,7 @@ resources:
     blurb: >-
       The whole path in three steps and twelve chapters, with reflection
       questions and a devotional prayer at the end of each.
+    keywords: "book chapters steps tithe giving debt saving emergency fund investing retirement wealth contentment prosperity legacy work calling"
     url: https://www.amazon.com/dp/B0HCC69G7V
     affiliate: amazon
     stance: commercial
@@ -58,6 +59,7 @@ resources:
     blurb: >-
       Reading plans you can keep to in a few minutes a day, including plans on
       money and provision.
+    keywords: "worry fear anxious daily devotional reading plan provision peace together"
     url: https://www.bible.com/
     stance: free
     topics: [anxiety-provision, tithing-giving, marriage-family]
@@ -68,7 +70,7 @@ resources:
     blurb: >-
       Non-profit credit counsellors. An initial counselling session is free,
       and they are not lenders — they do not profit from your debt.
-    keywords: "credit card collections behind on payments creditor bankruptcy repayment plan"
+    keywords: "credit card collections behind on payments creditor bankruptcy repayment plan counselling counsellors talk someone"
     url: https://www.nfcc.org/
     stance: free
     topics: [debt-borrowing]
@@ -148,7 +150,7 @@ resources:
     blurb: >-
       The largest Christian bookseller — Bibles, study guides and the standard
       works on money and giving, usually below list price.
-    keywords: "books bibles study guides shop"
+    keywords: "books bibles study guides shop bookstore"
     url: https://www.christianbook.com/
     affiliate: generic
     stance: commercial
@@ -159,6 +161,7 @@ resources:
     blurb: >-
       Bibles, devotionals and study material from a non-profit that has been
       publishing Scripture since 1816.
+    keywords: "bibles devotional study scripture reading"
     url: https://www.americanbible.org/
     affiliate: generic
     stance: commercial
@@ -169,6 +172,7 @@ resources:
     blurb: >-
       Study guides and DVD curricula built for small groups, if you would
       rather work through this with other people than alone.
+    keywords: "small group curriculum guides couples family children study together"
     url: https://churchsource.com/
     affiliate: generic
     stance: commercial
@@ -181,7 +185,7 @@ resources:
     blurb: >-
       A ministry devoted entirely to biblical finance, with free studies for
       individuals, couples and small groups. Not a shop.
-    keywords: "study small group course free debt budget generosity"
+    keywords: "study small group course free debt budget generosity giving couples family children marriage together"
     url: https://compassfinancialministry.org/
     stance: free
     topics: [debt-borrowing, anxiety-provision, budgeting-saving, marriage-family, tithing-giving]
@@ -191,7 +195,7 @@ resources:
     blurb: >-
       Decades of biblical money teaching, budgeting tools and free coaching
       referrals from a long-standing stewardship ministry.
-    keywords: "budget calculator coaching debt payoff free course"
+    keywords: "budget calculator coaching debt payoff free course saving emergency fund counselling"
     url: https://www.crown.org/
     stance: free
     topics: [debt-borrowing, anxiety-provision, budgeting-saving]

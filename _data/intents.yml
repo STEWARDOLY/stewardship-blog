@@ -9,9 +9,12 @@
 # Rules of thumb when editing:
 #   - first person, plain words, the way someone would actually say it
 #   - a need, not a topic ("I'm behind on payments", not "Debt management")
-#   - three or four per topic; more reads as a menu and defeats the purpose
+#   - six per topic, and each one must narrow to something. A chip that
+#     returns the whole list has taught the reader the chips do not work.
 #   - `query` is keyword soup fed to the ranking engine. It is never shown,
-#     so stuff it with every term that should match.
+#     so stuff it with every term that should match. If a chip returns
+#     nothing useful, fix it here or add `keywords` to the resource in
+#     _data/resources.yml — do not reword the label to suit the data.
 #
 # Keys must match pillar filenames. A topic with no entry here simply renders
 # the search box without chips.
@@ -19,48 +22,86 @@
 
 debt-borrowing:
   - label: I'm behind on payments
-    query: credit card collections behind payments creditor bankruptcy counselling
+    query: credit card collections behind payments creditor bankruptcy
   - label: I want a plan to get out
-    query: budget plan payoff coaching calculator free debt
+    query: payoff calculator plan budget coaching
+  - label: I want to talk to someone
+    query: counselling counsellors coaching talk someone help
+  - label: I'm not in the US
+    query: country charity outside local
+  - label: I'd rather work through it with others
+    query: small group course study together
   - label: Just show me the passages
-    query: verses passages scripture index reference lookup
+    query: verses passages scripture reference lookup
 
 anxiety-provision:
   - label: I can't cover this month
-    query: emergency rent food bills help urgent church benevolence
+    query: emergency rent food bills urgent help
   - label: I'm frightened about money
-    query: reading plan devotional study worry provision daily
+    query: worry fear anxious provision peace
+  - label: I need help but can't ask for it
+    query: church benevolence ask locally help urgent
+  - label: I want something to read each day
+    query: daily devotional reading plan
+  - label: I want to learn to budget
+    query: budget calculator coaching course
   - label: Just show me the passages
-    query: verses passages scripture index reference lookup
+    query: verses passages scripture reference lookup
 
 tithing-giving:
   - label: I don't know how much to give
-    query: study course giving generosity tithe small group
+    query: tithe giving generosity course study
   - label: Is this ministry trustworthy?
-    query: charity donate ministry accountability check giving
+    query: charity donate ministry accountability check
+  - label: I want to give but money is tight
+    query: debt budget free generosity giving
   - label: I want to study this properly
-    query: commentary greek hebrew original language study books bibles
+    query: commentary greek hebrew original language
+  - label: I'd rather do this with a group
+    query: small group curriculum guides course together
+  - label: Just show me the passages
+    query: verses passages scripture reference lookup
 
 budgeting-saving:
   - label: I want to start budgeting
-    query: budget app tracking spending envelope paycheck
-  - label: I'd rather not pay for a tool
-    query: free budget app tracking ministry calculator
+    query: budget app tracking spending envelope
+  # "Free only" is already a button beside the search box, so this slot goes to
+  # a need nothing else covers rather than a second door to the same room.
+  - label: I'm thinking about retirement
+    query: retirement investing saving fund
+  - label: I never have anything left over
+    query: spending paycheck tracking envelope
+  - label: I want to save for emergencies
+    query: saving emergency fund investing retirement
+  - label: I want a book on it
+    query: book bookstore bibles guides chapters
   - label: Just show me the passages
-    query: verses passages scripture index reference lookup
+    query: verses passages scripture reference lookup
 
 wealth-prosperity:
   - label: Is wanting more wrong?
-    query: study books wealth contentment generosity
+    query: wealth contentment prosperity chapters
+  - label: I feel guilty about earning well
+    query: wealth contentment generosity giving
   - label: I want to give from what I have
-    query: charity donate ministry accountability giving check
-  - label: I want to study this properly
-    query: commentary greek hebrew original language study bibles
+    query: charity donate ministry accountability giving
+  - label: How do I read prosperity teaching?
+    query: commentary greek hebrew original language
+  - label: I want a book on it
+    query: book bookstore bibles guides shop
+  - label: Just show me the passages
+    query: verses passages scripture reference lookup
 
 marriage-family:
   - label: We fight about money
-    query: small group study couples course guides
+    query: couples marriage small group study
   - label: We want to budget together
     query: budget app free tracking spending
   - label: I want to teach my children
-    query: study guides books family small group
+    query: children family guides study
+  - label: I want something we can read together
+    query: daily devotional reading plan together
+  - label: I want a study we can do as a couple
+    query: small group curriculum course couples
+  - label: Just show me the passages
+    query: verses passages scripture reference lookup

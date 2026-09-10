@@ -142,5 +142,5 @@ Each chip carries a `query` of keyword soup that drives the same ranking
 engine as the search box. **It is never shown to the reader** — the chip shows
 their words, the matching uses ours. Typing always overrides an active chip.
 
-Keep to three or four per topic; more reads as a menu and defeats the point.
-A topic with no entry renders the search box without chips.
+Six per topic. Each must narrow to something — a chip that returns nearly the
+whole list teaches the reader the chips do not work. A topic with no entry renders the search box without chips.
