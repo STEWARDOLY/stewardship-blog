@@ -1,11 +1,20 @@
 ---
 layout: default
 ---
+<div class="printonly print-head" hidden>
+  <strong>{{ site.title }}</strong>
+  <span>{{ site.print.source }}</span>
+</div>
+
 <section class="pagehead">
   <div class="wrap">
     <p class="label">{{ site.scripture_index.label }}</p>
     <h1>{{ site.scripture_index.heading }}</h1>
     <p class="pagehead__blurb">{{ site.scripture_index.sub }}</p>
+    <p class="printbar" data-printbar hidden>
+      <button class="btn btn--ghost" type="button" data-print>{{ site.print.button }}</button>
+      <span class="printbar__hint">{{ site.print.hint }}</span>
+    </p>
   </div>
 </section>
 
@@ -38,7 +47,16 @@ layout: default
   {%- endfor %}
 
   <p class="si__foot">{{ site.scripture_index.note }}</p>
+
+  <div class="printonly print-foot" hidden>
+    {%- for note in site.footer_notes %}
+    <p>{{ note }}</p>
+    {%- endfor %}
+    <p>{{ site.print.source }}</p>
+  </div>
 </main>
+
+<script src="{{ '/assets/js/print.js' | relative_url }}" defer></script>
 
 {% include capture.html id="cap-index-end"
    heading=site.scripture_index.capture_end_heading

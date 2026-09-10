@@ -361,3 +361,9 @@ next_step:
   care_note: >-
     Nothing on this page is sold to you. If money is the reason you are
     reading, you should not have to spend any to get help.
+
+# Text that appears only on the printed / PDF version of the Scripture Index.
+print:
+  button: Save as PDF
+  hint: Prints as a clean reference sheet — no navigation, no forms.
+  source: stewardshipjourneys.com

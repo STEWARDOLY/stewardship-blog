@@ -144,3 +144,23 @@ their words, the matching uses ours. Typing always overrides an active chip.
 
 Six per topic. Each must narrow to something — a chip that returns nearly the
 whole list teaches the reader the chips do not work. A topic with no entry renders the search box without chips.
+
+### Printing the index
+
+`assets/css/print.css` is linked with `media="print"`, so it never touches the
+screen. It strips the masthead, footer, capture forms and the print button
+itself, keeps the contents list and all the passages, and sets
+`break-inside: avoid` on each row so no reference is split across pages.
+
+The Scripture Index page also carries two print-only blocks — a header naming
+the site, and a colophon repeating the footer notes and the domain — so a
+printed copy identifies its own source. Both are `hidden` on screen.
+
+`assets/js/print.js` reveals the "Save as PDF" button and wires it to
+`window.print()`. The button is hidden in markup, because a control that opens
+a print dialog is meaningless without JavaScript; Ctrl/Cmd+P still produces
+the same document for those readers.
+
+The printed domain comes from `print.source` in `_config.yml`. **It is set to
+stewardshipjourneys.com, not the github.io address** — update it if that
+changes, since a printed sheet cannot be corrected after the fact.

@@ -1,0 +1,173 @@
+/* Print / Save-as-PDF styles.
+ *
+ * Loaded with media="print", so it never affects the screen. The goal is a
+ * clean reference document: the index itself, nothing that only works on a
+ * screen, and no orphaned headings.
+ */
+
+@page {
+  margin: 18mm 16mm 20mm;
+}
+
+body {
+  background: #fff !important;
+  color: #000;
+  font-family: "Literata", Georgia, serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+
+/* Screen-only furniture. None of it means anything on paper. */
+.top,
+footer,
+.lp__foot,
+.capture,
+.nextstep,
+.hero,
+.spectrum,
+.book,
+.topics,
+.btn,
+.printbar {
+  display: none !important;
+}
+
+.printonly { display: block !important; }
+
+.wrap,
+.si {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* --- masthead of the printed document --- */
+.print-head {
+  border-bottom: 1.5pt solid #000;
+  padding-bottom: 4pt;
+  margin-bottom: 14pt;
+}
+.print-head strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 13pt;
+  display: block;
+}
+.print-head span {
+  font-size: 8.5pt;
+  color: #444;
+}
+
+/* --- page head --- */
+.pagehead {
+  border: 0 !important;
+  padding: 0 0 10pt !important;
+}
+.pagehead .label { display: none; }
+.pagehead h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 20pt;
+  margin: 0 0 5pt;
+}
+.pagehead__blurb {
+  font-size: 10pt;
+  color: #333;
+  max-width: none;
+}
+
+/* --- contents: useful as an overview even without live links --- */
+.si__toc {
+  display: block !important;
+  border: 0 !important;
+  border-bottom: 0.5pt solid #999 !important;
+  padding: 0 0 8pt !important;
+  margin: 0 0 6pt !important;
+  columns: 2;
+  column-gap: 10mm;
+}
+.si__toc a {
+  display: block;
+  border: 0 !important;
+  background: none !important;
+  padding: 1.5pt 0 !important;
+  color: #000 !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 8.5pt;
+  text-decoration: none;
+  break-inside: avoid;
+}
+
+/* --- sections --- */
+.si__sec {
+  padding-top: 12pt;
+  break-inside: auto;
+}
+.si__sec h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 13pt;
+  margin: 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.si__q {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 8pt;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #555;
+  margin: 3pt 0 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.si__summary {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 4pt 0 0;
+  max-width: none;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.si__refs { margin-top: 7pt; }
+.si__refs li {
+  display: grid;
+  grid-template-columns: 32mm 1fr 12mm;
+  gap: 0 5mm;
+  align-items: baseline;
+  padding: 3.5pt 0;
+  border-top: 0.5pt solid #ccc !important;
+  border-bottom: 0 !important;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.si__ref {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #000;
+}
+.si__note { font-size: 9.5pt; }
+.si__page {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 8pt;
+  color: #555;
+  text-align: right;
+}
+
+.si__foot {
+  margin-top: 12pt;
+  padding-top: 6pt;
+  border-top: 0.5pt solid #999;
+  font-size: 8.5pt;
+  color: #333;
+  max-width: none;
+}
+
+/* --- printed colophon --- */
+.print-foot {
+  margin-top: 10pt;
+  font-size: 8pt;
+  color: #444;
+  line-height: 1.4;
+}
+.print-foot em { font-style: italic; }

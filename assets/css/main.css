@@ -162,6 +162,16 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .pagehead .label{color:var(--brass);display:block;margin-bottom:.6rem}
 .pagehead h1{font-size:clamp(1.8rem,1.4rem+1.8vw,2.6rem);font-weight:600}
 .pagehead__blurb{color:var(--stone);font-size:.98rem;max-width:38rem;margin:.7rem 0 0}
+
+/* Print controls — revealed by JS, since a button that opens a print dialog
+   is meaningless without one. Print-only blocks stay hidden on screen. */
+.printonly{display:none}
+.printbar[hidden]{display:none}
+.printbar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem;
+  margin:1.3rem 0 0}
+.printbar .btn{margin-top:0;padding:.55rem 1.1rem;font-size:.82rem}
+.printbar__hint{font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;
+  color:var(--stone)}
 .prose{padding-block:2.4rem 3rem;max-width:44rem}
 .prose h2{font-size:1.4rem;font-weight:600;margin:2rem 0 .6rem}
 .prose p{margin:0 0 1rem}
