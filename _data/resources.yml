@@ -128,3 +128,59 @@ resources:
     url: https://www.ecfa.org/
     stance: free
     topics: [tithing-giving, wealth-prosperity]
+
+  # --- Christian retail & study partners -----------------------------------
+  # Chosen from the Christian affiliate directories for topical fit only.
+  # Deliberately excluded: homeschool curricula, Christian dating, gifts,
+  # figurines, apparel, streaming and tour operators. They convert well on
+  # other blogs and would read as banner advertising on this one.
+
+  - name: Christianbook
+    kind: Bookstore
+    blurb: >-
+      The largest Christian bookseller — Bibles, study guides and the standard
+      works on money and giving, usually below list price.
+    url: https://www.christianbook.com/
+    affiliate: generic
+    stance: commercial
+    topics: [tithing-giving, wealth-prosperity, budgeting-saving, marriage-family]
+
+  - name: American Bible Society
+    kind: Bibles
+    blurb: >-
+      Bibles, devotionals and study material from a non-profit that has been
+      publishing Scripture since 1816.
+    url: https://www.americanbible.org/
+    affiliate: generic
+    stance: commercial
+    topics: [tithing-giving, wealth-prosperity]
+
+  - name: ChurchSource
+    kind: Small-group resources
+    blurb: >-
+      Study guides and DVD curricula built for small groups, if you would
+      rather work through this with other people than alone.
+    url: https://churchsource.com/
+    affiliate: generic
+    stance: commercial
+    topics: [marriage-family, tithing-giving]
+
+  # --- Free ministry resources, safe on any page ---------------------------
+
+  - name: Compass — Finances God's Way
+    kind: Free ministry
+    blurb: >-
+      A ministry devoted entirely to biblical finance, with free studies for
+      individuals, couples and small groups. Not a shop.
+    url: https://compassfinancialministry.org/
+    stance: free
+    topics: [debt-borrowing, anxiety-provision, budgeting-saving, marriage-family, tithing-giving]
+
+  - name: Crown Financial Ministries
+    kind: Free ministry
+    blurb: >-
+      Decades of biblical money teaching, budgeting tools and free coaching
+      referrals from a long-standing stewardship ministry.
+    url: https://www.crown.org/
+    stance: free
+    topics: [debt-borrowing, anxiety-provision, budgeting-saving]

@@ -126,6 +126,10 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
   font-family:"IBM Plex Sans",sans-serif;font-size:.85rem;font-weight:500;
   padding:.72rem 1.35rem;text-decoration:none}
 .btn:hover{background:var(--brass)}
+/* Primary call to action — the first thing a new reader should see to press. */
+.btn--lg{font-size:1.05rem;font-weight:600;padding:1.05rem 2.2rem;
+  letter-spacing:.01em}
+@media(min-width:46rem){.btn--lg{font-size:1.12rem;padding:1.15rem 2.6rem}}
 
 /* ---------- capture ---------- */
 .capture{padding-block:3rem}
@@ -271,10 +275,13 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .bubble{margin:0;padding:.72rem 1.05rem;font-size:.97rem;line-height:1.35;
   max-width:88%;width:fit-content;position:relative;
   border-radius:1.15rem}
-.bubble--in{align-self:flex-start;background:rgba(255,255,255,.94);color:var(--ink);
-  border-bottom-left-radius:.3rem}
-.bubble--out{align-self:flex-end;background:var(--brass);color:#12211D;
-  font-weight:500;border-bottom-right-radius:.3rem}
+/* `.hero p` sets a pale colour and outranks a lone `.bubble--*` class, which
+   was washing both bubbles out. These selectors have to match its specificity. */
+.hero .bubble--in,.lp__hero .bubble--in{align-self:flex-start;
+  background:#fff;color:var(--pine-deep);border-bottom-left-radius:.3rem}
+.hero .bubble--out,.lp__hero .bubble--out{align-self:flex-end;
+  background:var(--brass);color:#12211D;font-weight:500;
+  border-bottom-right-radius:.3rem}
 @media(prefers-reduced-motion:no-preference){
   .bubble{animation:bubble-in .42s cubic-bezier(.22,1,.36,1) both}
   .bubble:nth-child(1){animation-delay:.05s}

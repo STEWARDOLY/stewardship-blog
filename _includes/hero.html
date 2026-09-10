@@ -1,11 +1,10 @@
 <section class="hero">
   <div class="wrap hero__in">
     <div>
-      <p class="label">{{ site.hero.label }}</p>
       <h1>{{ site.hero.heading }}</h1>
       {% include question-bubbles.html %}
       <p class="hero__actions">
-        <a class="btn" href="{{ site.hero.cta_url }}">{{ site.hero.cta_text }}</a>
+        <a class="btn btn--lg" href="{{ site.hero.cta_url }}">{{ site.hero.cta_text }}</a>
       </p>
       <p class="hero__trust">{{ site.hero.trust }}</p>
     </div>
