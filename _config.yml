@@ -343,6 +343,8 @@ affiliates:
 
 next_step:
   label: Where to go next
+  filter_label: What do you need right now?
+  filter_placeholder: "Try: credit card, budget, giving, emergency"
   # Shown when a topic is flagged as one where the reader is likely raw.
   # Those pages get free resources only — see reader_state in each pillar.
   care_note: >-

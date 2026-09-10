@@ -113,3 +113,20 @@ those links render bare.
 
 Paid links get `rel="noopener sponsored"`, and the FTC disclosure renders
 automatically in any panel containing at least one paid link — and only then.
+
+### Filtering the resource panel
+
+`assets/js/next-step.js` adds a search box above the list. It is progressive
+enhancement — the control is `hidden` in the markup and only unhidden by the
+script, so a reader without JavaScript sees the plain list instead of a dead
+box. Nothing typed leaves the page.
+
+Matching runs against each resource's name, kind, blurb and optional
+`keywords` field, ranked by how many query words hit. Add `keywords` to a
+resource in `_data/resources.yml` for terms a reader would type that the
+blurb does not contain ("credit card", "emergency", "rent").
+
+**A query that matches nothing never empties the panel.** It says so and
+restores the full list. A reader who typed their real problem and got "no
+results" is worse off than one who was never offered a box — keep that
+behaviour if you change this file.

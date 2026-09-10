@@ -27,7 +27,7 @@
 {%- endfor -%}
 
 {%- if shown > 0 %}
-<aside class="nextstep" aria-labelledby="nextstep-h">
+<aside class="nextstep" aria-labelledby="nextstep-h" data-nextstep>
   <p class="label nextstep__label">{{ site.next_step.label }}</p>
   <h2 id="nextstep-h" class="nextstep__h">{{ include.heading | default: 'Useful from here' }}</h2>
 
@@ -35,11 +35,27 @@
   <p class="nextstep__care">{{ site.next_step.care_note }}</p>
   {%- endif %}
 
-  <ul class="nextstep__list">
+  {%- comment -%}
+    Progressive enhancement: the filter is hidden until the script unhides it,
+    so a reader without JavaScript sees the plain list rather than a dead box.
+  {%- endcomment %}
+  <div class="nsfilter" data-nsfilter hidden>
+    <label class="nsfilter__label" for="nsq-{{ topic }}">{{ site.next_step.filter_label }}</label>
+    <input class="nsfilter__input" id="nsq-{{ topic }}" type="search" autocomplete="off"
+           placeholder="{{ site.next_step.filter_placeholder }}" data-nsinput>
+    <button class="nsfilter__chip" type="button" data-nsfree aria-pressed="false">Free only</button>
+    <button class="nsfilter__clear" type="button" data-nsclear hidden>Clear</button>
+  </div>
+
+  <p class="nsfilter__status" data-nsstatus role="status" hidden></p>
+
+  <ul class="nextstep__list" data-nslist>
     {%- for r in site.data.resources.resources -%}
       {%- if r.topics contains topic -%}
-        {%- unless state == 'raw' and r.stance == 'commercial' %}
-    <li class="res">
+        {%- unless state == 'raw' and r.stance == 'commercial' -%}
+        {%- capture haystack %}{{ r.name }} {{ r.kind }} {{ r.blurb }} {{ r.keywords }}{% endcapture %}
+    <li class="res" data-res data-stance="{{ r.stance }}"
+        data-search="{{ haystack | strip_html | strip_newlines | downcase | escape_once }}">
       <span class="res__kind">{{ r.kind }}</span>
       {%- if r.internal %}
       <a class="res__name" href="{% include affiliate-link.html resource=r %}">{{ r.name }}</a>

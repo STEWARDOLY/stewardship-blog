@@ -393,7 +393,30 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .nextstep__care{margin:0 0 1.1rem;padding-left:.9rem;
   border-left:3px solid var(--pine);font-size:.88rem;color:var(--stone);
   line-height:1.55}
+/* filter — hidden until the script enables it */
+.nsfilter[hidden]{display:none}
+.nsfilter{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;
+  margin:0 0 1.2rem;padding-bottom:1.1rem;border-bottom:1px solid var(--rule)}
+.nsfilter__label{flex:1 0 100%;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:.15rem}
+.nsfilter__input{flex:1 1 14rem;padding:.6rem .8rem;font:inherit;font-size:.9rem;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule)}
+.nsfilter__input:focus{outline:2px solid var(--brass);outline-offset:1px;
+  background:#fff}
+.nsfilter__chip,.nsfilter__clear{font-family:"IBM Plex Sans",sans-serif;
+  font-size:.76rem;padding:.55rem .9rem;border:1px solid var(--rule);
+  background:var(--paper);color:var(--pine);cursor:pointer;
+  transition:background .14s,border-color .14s,color .14s}
+.nsfilter__chip:hover,.nsfilter__clear:hover{border-color:var(--brass)}
+.nsfilter__chip.is-on{background:var(--pine);border-color:var(--pine);color:#fff}
+.nsfilter__clear[hidden]{display:none}
+.nsfilter__status[hidden]{display:none}
+.nsfilter__status{margin:0 0 1rem;font-family:"IBM Plex Sans",sans-serif;
+  font-size:.78rem;line-height:1.5;color:var(--stone)}
+
 .nextstep__list{list-style:none;margin:0;padding:0}
+.res[hidden]{display:none}
 .res{display:grid;gap:.2rem;padding-block:.95rem;border-top:1px solid var(--rule)}
 .res:first-child{border-top:0;padding-top:0}
 @media(min-width:40rem){
