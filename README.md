@@ -192,3 +192,29 @@ until they press play.
 per-file limit but large for the web, and GitHub Pages has a soft 100 GB/month
 bandwidth allowance. If it gets popular, re-encode smaller (720p, CRF 28) and
 replace the file. An optional `book.video_poster` renders a poster frame.
+
+### Re-encoding the trailer
+
+The source was 1440p at 14 Mbps — 56 MB for 33 seconds, far past what a
+736px-wide player needs. The committed file is 1080p, CRF 27, ~11 MB:
+
+```bash
+ffmpeg -i source.mp4 -vf "scale=1920:-2" -c:v libx264 -profile:v high \
+  -pix_fmt yuv420p -crf 27 -preset slow -c:a aac -b:a 128k -ac 2 \
+  -movflags +faststart assets/video/book-trailer.mp4
+```
+
+`-movflags +faststart` is not optional: it moves the moov atom ahead of the
+media data so playback starts before the file finishes downloading.
+
+The poster is a frame at 27.75s, chosen because **the trailer has burned-in
+subtitles** and almost every frame carries one mid-sentence. The gap between
+"rooted" and the closing title is one of the few clean moments:
+
+```bash
+ffmpeg -ss 27.75 -i source.mp4 -frames:v 1 -vf "scale=1600:-2" -q:v 4 \
+  assets/img/book-trailer-poster.jpg
+```
+
+If the trailer is ever re-cut, check the new poster frame for a stray caption
+before committing it.

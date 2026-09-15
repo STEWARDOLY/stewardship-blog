@@ -218,6 +218,7 @@ book:
   # Drop a file in assets/video/ and name it here to show a trailer under the
   # book panel. Leave blank and no player renders.
   video: /assets/video/book-trailer.mp4
+  video_poster: /assets/img/book-trailer-poster.jpg
   video_caption: A short introduction to the book.
   video_label: Watch the introduction
   cta_text: About the book
