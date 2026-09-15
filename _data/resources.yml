@@ -30,7 +30,12 @@ resources:
     url: https://www.amazon.com/dp/B0HCC69G7V
     affiliate: amazon
     stance: commercial
-    topics: [tithing-giving, budgeting-saving, wealth-prosperity, marriage-family]
+    # The one commercial resource allowed on `raw` pages. It is the author's
+    # own work rather than a third-party offer, and the site exists to point
+    # at it. Nothing else should ever carry this flag; the withholding rule
+    # is what keeps the debt and anxiety pages safe.
+    allow_raw: true
+    topics: [tithing-giving, debt-borrowing, anxiety-provision, wealth-prosperity, budgeting-saving, marriage-family]
 
   # --- Free, always safe ---------------------------------------------------
   - name: The Stewardship Scripture Index

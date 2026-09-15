@@ -4,6 +4,7 @@ nav_title: "Tithing"
 order: 1
 question_count: 9
 reader_state: steady
+icon: topic-tithing.svg
 blurb: >-
   Whether the tithe binds Christians today, gross vs. net, giving while in debt.
 ---

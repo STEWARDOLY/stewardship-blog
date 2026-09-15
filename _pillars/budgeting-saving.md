@@ -4,6 +4,7 @@ nav_title: "Saving"
 order: 5
 question_count: 6
 reader_state: planning
+icon: topic-saving.svg
 blurb: >-
   Whether planning contradicts trust, emergency funds, investing, retirement.
 ---

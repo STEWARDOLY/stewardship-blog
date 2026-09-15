@@ -1,0 +1,6 @@
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+  <path d="M17 7v20M9 27h16" stroke="#14544C" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 13h22" stroke="#14544C" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 13l-3 6a4 4 0 0 0 6 0zM28 13l3 6a4 4 0 0 1-6 0z" stroke="#14544C" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="17" cy="7" r="2" fill="#B08421"/>
+</svg>

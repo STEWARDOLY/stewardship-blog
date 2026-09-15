@@ -200,6 +200,8 @@ story:
 topics:
   heading: Six topics
   sub: Every question on the site lives in one of these.
+  # Shown at the foot of each topic card.
+  cue: See the questions
 
 # ---------------------------------------------------------------------------
 # Book panel
@@ -213,6 +215,11 @@ book:
   body: >-
     Three steps, twelve chapters, with reflection questions and a devotional
     prayer at the end of each. 181 pages, paperback and Kindle.
+  # Drop a file in assets/video/ and name it here to show a trailer under the
+  # book panel. Leave blank and no player renders.
+  video: /assets/video/book-trailer.mp4
+  video_caption: A short introduction to the book.
+  video_label: Watch the introduction
   cta_text: About the book
   cta_url: https://www.amazon.com/dp/B0HCC69G7V
 
@@ -359,8 +366,8 @@ next_step:
   # Shown when a topic is flagged as one where the reader is likely raw.
   # Those pages get free resources only — see reader_state in each pillar.
   care_note: >-
-    Nothing on this page is sold to you. If money is the reason you are
-    reading, you should not have to spend any to get help.
+    Everything below is free except the book. If money is the reason you are
+    reading, you never have to spend any to get help here.
 
 # Text that appears only on the printed / PDF version of the Scripture Index.
 print:

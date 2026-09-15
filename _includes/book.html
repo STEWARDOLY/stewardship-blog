@@ -6,3 +6,19 @@
     <a class="btn" href="{{ site.book.cta_url | relative_url }}">{{ site.book.cta_text }}</a>
   </div>
 </div>
+
+{%- if site.book.video and site.book.video != '' %}
+<div class="wrap booktrailer">
+  <p class="label booktrailer__label">{{ site.book.video_label }}</p>
+  <video class="booktrailer__player" controls preload="metadata"
+         playsinline{% if site.book.video_poster and site.book.video_poster != '' %}
+         poster="{{ site.book.video_poster | relative_url }}"{% endif %}>
+    <source src="{{ site.book.video | relative_url }}" type="video/mp4">
+    Your browser cannot play this video.
+    <a href="{{ site.book.video | relative_url }}">Download it instead</a>.
+  </video>
+  {%- if site.book.video_caption and site.book.video_caption != '' %}
+  <p class="booktrailer__caption">{{ site.book.video_caption }}</p>
+  {%- endif %}
+</div>
+{%- endif %}

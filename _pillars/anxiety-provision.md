@@ -4,6 +4,7 @@ nav_title: "Anxiety"
 order: 3
 question_count: 7
 reader_state: raw
+icon: topic-anxiety.svg
 blurb: >-
   Financial fear, daily bread, praying about money, paycheck to paycheck.
 ---

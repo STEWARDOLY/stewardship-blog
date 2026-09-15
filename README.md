@@ -164,3 +164,31 @@ the same document for those readers.
 The printed domain comes from `print.source` in `_config.yml`. **It is set to
 stewardshipjourneys.com, not the github.io address** — update it if that
 changes, since a printed sheet cannot be corrected after the fact.
+
+### The book on every topic
+
+The book carries `allow_raw: true` in `_data/resources.yml` — the one
+commercial resource permitted on `raw` pages. It is the author's own work
+rather than a third-party offer. **Nothing else should ever carry that flag**;
+the withholding rule is what keeps the debt and anxiety pages safe, and it is
+still enforced for every other commercial entry.
+
+Because the book now appears there, `next_step.care_note` says "Everything
+below is free except the book" rather than "Nothing on this page is sold to
+you". Keep those two in step — if the flag moves, the wording must too.
+
+### Topic icons
+
+Each pillar names an icon in its front matter (`icon: topic-saving.svg`),
+resolved from `_includes/`. Same pattern as the mindset icons.
+
+### The book trailer
+
+`site.book.video` points at `assets/video/book-trailer.mp4`. Blank it and no
+player renders. `preload="metadata"` means visitors download only a few KB
+until they press play.
+
+**The file is 56 MB**, committed to the repo. That is under GitHub's 100 MB
+per-file limit but large for the web, and GitHub Pages has a soft 100 GB/month
+bandwidth allowance. If it gets popular, re-encode smaller (720p, CRF 28) and
+replace the file. An optional `book.video_poster` renders a poster frame.

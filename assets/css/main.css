@@ -97,6 +97,10 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
   border:1px solid var(--rule);padding:1.3rem;text-decoration:none;display:flex;
   flex-direction:column;gap:.45rem;transition:border-color .14s}
 .card:hover{border-color:var(--brass)}
+.card__top{display:flex;align-items:center;justify-content:space-between;
+  gap:.6rem;margin-bottom:.15rem}
+.card__icon{display:flex;flex:none;opacity:.9;transition:opacity .14s}
+.card:hover .card__icon{opacity:1}
 .card .num{font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;
   letter-spacing:.16em;color:var(--brass)}
 .card h3{font-size:1.16rem;font-weight:600}
@@ -130,6 +134,15 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.14;
 .btn--lg{font-size:1.05rem;font-weight:600;padding:1.05rem 2.2rem;
   letter-spacing:.01em}
 @media(min-width:46rem){.btn--lg{font-size:1.12rem;padding:1.15rem 2.6rem}}
+
+/* ---------- book trailer ---------- */
+.booktrailer{padding-block:2.2rem 0}
+.booktrailer__label{color:var(--brass);display:block;margin-bottom:.8rem}
+.booktrailer__player{display:block;width:100%;max-width:46rem;height:auto;
+  aspect-ratio:16/9;background:var(--pine-deep);
+  border:1px solid var(--rule)}
+.booktrailer__caption{margin:.8rem 0 0;max-width:46rem;
+  font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;color:var(--stone)}
 
 /* ---------- capture ---------- */
 .capture{padding-block:3rem}

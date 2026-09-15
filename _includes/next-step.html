@@ -14,7 +14,7 @@
 {%- assign paid = 0 -%}
 {%- for r in site.data.resources.resources -%}
   {%- if r.topics contains topic -%}
-    {%- unless state == 'raw' and r.stance == 'commercial' -%}
+    {%- unless state == "raw" and r.stance == "commercial" and r.allow_raw != true -%}
       {%- assign shown = shown | plus: 1 -%}
       {%- if r.affiliate == 'amazon' and site.affiliates.amazon_tag != '' -%}
         {%- assign paid = paid | plus: 1 -%}
@@ -66,7 +66,7 @@
   <ul class="nextstep__list" data-nslist>
     {%- for r in site.data.resources.resources -%}
       {%- if r.topics contains topic -%}
-        {%- unless state == 'raw' and r.stance == 'commercial' -%}
+        {%- unless state == "raw" and r.stance == "commercial" and r.allow_raw != true -%}
         {%- capture haystack %}{{ r.name }} {{ r.kind }} {{ r.blurb }} {{ r.keywords }}{% endcapture %}
     <li class="res" data-res data-stance="{{ r.stance }}"
         data-search="{{ haystack | strip_html | strip_newlines | downcase | escape_once }}">
