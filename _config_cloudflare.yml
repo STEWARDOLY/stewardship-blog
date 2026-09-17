@@ -1,0 +1,8 @@
+# Layered on top of _config.yml by the Cloudflare Pages build command:
+#   bundle install && bundle exec jekyll build --config _config.yml,_config_cloudflare.yml
+#
+# Cloudflare serves the site at the domain root, so the project-page baseurl
+# GitHub Pages needs must be cleared here. Values in this file override
+# _config.yml for Cloudflare builds only; the GitHub Pages build never reads
+# it, so both deployments stay correct during the transition.
+baseurl: ""
