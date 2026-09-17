@@ -240,3 +240,18 @@ not a Pages project, and a Worker's `npx wrangler deploy` needs an entry point.
 It declares a static-assets-only Worker pointing at `_site`. The `name` field
 must match the Worker name in the dashboard. It is in `exclude` so it is never
 published with the site.
+
+### `theme: null`
+
+The `github-pages` gem applies `jekyll-theme-primer` by default when no theme
+is set. This site defines every layout and include itself and links only
+`main.css`, so the theme produced nothing but a dead 136 KB
+`assets/css/style.css` that no page referenced.
+
+It also broke the Cloudflare build: the theme's SCSS contains a UTF-8
+character, and Cloudflare's build container runs a US-ASCII locale, so Sass
+raised `Invalid US-ASCII character "\xE2"`. It never failed locally because
+Ruby on Windows defaults to UTF-8.
+
+`theme: null` removes the file rather than working around the locale, so the
+failure cannot recur. Do not remove that line without checking a Linux build.

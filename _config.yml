@@ -20,6 +20,12 @@ baseurl: "/stewardship-blog"
 
 lang: en
 
+# The github-pages gem applies jekyll-theme-primer by default. This site
+# defines every layout and include itself and links only main.css, so the
+# theme contributed nothing but a dead 136 KB assets/css/style.css — and its
+# SCSS broke the Cloudflare build, whose container runs a US-ASCII locale.
+theme: null
+
 collections:
   pillars:
     output: true
