@@ -219,7 +219,7 @@ ffmpeg -ss 27.75 -i source.mp4 -frames:v 1 -vf "scale=1600:-2" -q:v 4 \
 If the trailer is ever re-cut, check the new poster frame for a stray caption
 before committing it.
 
-## Hosting: Cloudflare Pages
+## Hosting: Cloudflare
 
 Measured from Taiwan, GitHub Pages delivered this site at ~0.7 Mbps while
 Cloudflare served ~65 Mbps on the same connection — the trailer (2.8 Mbps)
@@ -227,9 +227,16 @@ cannot play smoothly at that rate. The repo is prepared for Cloudflare Pages:
 
 - **Build command:** `bundle install && bundle exec jekyll build --config _config.yml,_config_cloudflare.yml`
 - **Output directory:** `_site`
+- **Deploy command:** `npx wrangler deploy` (Workers builds only)
 - `.ruby-version` pins Ruby 3.2.11 (the github-pages gem breaks on 3.4+)
 
 `_config_cloudflare.yml` clears `baseurl` because Cloudflare serves at the
 domain root. GitHub Pages never reads it, so both deployments work at once;
 GitHub stays the git remote and Cloudflare rebuilds on every push. When the
 custom domain is attached to the Cloudflare project, nothing further changes.
+
+`wrangler.jsonc` exists because Cloudflare's unified flow creates a **Worker**,
+not a Pages project, and a Worker's `npx wrangler deploy` needs an entry point.
+It declares a static-assets-only Worker pointing at `_site`. The `name` field
+must match the Worker name in the dashboard. It is in `exclude` so it is never
+published with the site.

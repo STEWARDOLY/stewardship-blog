@@ -1,0 +1,12 @@
+{
+  // Must match the Worker name in the Cloudflare dashboard.
+  "name": "stewardship-blog",
+  "compatibility_date": "2026-09-01",
+
+  // A static-assets-only Worker: no server code, just the built Jekyll site.
+  // "directory" is where `jekyll build` puts its output.
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  }
+}
