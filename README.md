@@ -255,3 +255,23 @@ Ruby on Windows defaults to UTF-8.
 
 `theme: null` removes the file rather than working around the locale, so the
 failure cannot recur. Do not remove that line without checking a Linux build.
+
+### Sitemap, robots.txt and canonicals
+
+`sitemap.xml` is hand-rolled rather than using jekyll-sitemap, so it lists
+exactly what should be indexed. **Anything carrying `sitemap: false` in its
+front matter is excluded** — currently `/start/`, `/404.html`, `robots.txt`
+and the sitemap itself.
+
+Do not filter it on `output_ext`: Jekyll 3 does not expose that property to
+Liquid, so the comparison silently matches nothing and drops every page while
+still producing valid-looking XML.
+
+`/start/` also carries `noindex: true`, because it duplicates the homepage.
+Without that the two compete in search for the same content.
+
+Every page emits a canonical pointing at `site.url`, so while the Cloudflare
+and GitHub Pages deployments are both live they consolidate onto one address.
+Note the sitemap and canonicals are only correct on the Cloudflare build,
+where `baseurl` is empty — another reason to retire GitHub Pages serving once
+the domain is attached.

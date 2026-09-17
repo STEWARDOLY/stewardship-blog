@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- comment -%}
+  Hand-rolled rather than via jekyll-sitemap, so we control exactly what is
+  listed. Anything carrying `sitemap: false` in its front matter is left out:
+  /start/ (a campaign landing page duplicating the homepage), /404.html, and
+  robots.txt and this file themselves.
+
+  Do not filter on `output_ext` — Jekyll 3 does not expose it to Liquid, so
+  the comparison silently matches nothing and drops every page.
+{%- endcomment -%}
+{%- for p in site.pages -%}
+{%- unless p.sitemap == false %}
+  <url>
+    <loc>{{ p.url | absolute_url | xml_escape }}</loc>
+  </url>
+{%- endunless -%}
+{%- endfor -%}
+{%- assign pillars = site.pillars | sort: 'order' -%}
+{%- for p in pillars %}
+  <url>
+    <loc>{{ p.url | absolute_url | xml_escape }}</loc>
+  </url>
+{%- endfor %}
+</urlset>
