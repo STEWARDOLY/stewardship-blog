@@ -14,9 +14,10 @@ description: >-
   Scripture, with the passages shown and the disagreements named honestly.
 
 url: "https://stewardshipjourneys.com"
-# Serving as a GitHub Pages *project* site (username.github.io/stewardship-blog)
-# requires the baseurl below. Clear it to "" when the custom domain is attached.
-baseurl: "/stewardship-blog"
+# Empty: the site is served at the root of stewardshipjourneys.com. This was
+# "/stewardship-blog" while GitHub Pages served it as a project site; that
+# deployment was retired on 2026-09-18.
+baseurl: ""
 
 lang: en
 

@@ -1,8 +1,8 @@
-# Layered on top of _config.yml by the Cloudflare Pages build command:
+# Layered on top of _config.yml by the Cloudflare build command:
 #   bundle install && bundle exec jekyll build --config _config.yml,_config_cloudflare.yml
 #
-# Cloudflare serves the site at the domain root, so the project-page baseurl
-# GitHub Pages needs must be cleared here. Values in this file override
-# _config.yml for Cloudflare builds only; the GitHub Pages build never reads
-# it, so both deployments stay correct during the transition.
+# Now that GitHub Pages is retired, _config.yml already sets baseurl to "" and
+# this override is redundant. It is kept because the build command in the
+# Cloudflare dashboard names this file — deleting it would break the build.
+# To remove it, first change that build command to a plain `jekyll build`.
 baseurl: ""

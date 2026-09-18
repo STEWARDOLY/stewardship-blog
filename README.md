@@ -219,7 +219,12 @@ ffmpeg -ss 27.75 -i source.mp4 -frames:v 1 -vf "scale=1600:-2" -q:v 4 \
 If the trailer is ever re-cut, check the new poster frame for a stray caption
 before committing it.
 
-## Hosting: Cloudflare
+## Hosting
+
+The site runs on Cloudflare at stewardshipjourneys.com. GitHub Pages served
+it during development and was retired on 2026-09-18; GitHub remains the git
+remote, and Cloudflare rebuilds on every push.
+
 
 Measured from Taiwan, GitHub Pages delivered this site at ~0.7 Mbps while
 Cloudflare served ~65 Mbps on the same connection — the trailer (2.8 Mbps)
@@ -275,3 +280,13 @@ and GitHub Pages deployments are both live they consolidate onto one address.
 Note the sitemap and canonicals are only correct on the Cloudflare build,
 where `baseurl` is empty — another reason to retire GitHub Pages serving once
 the domain is attached.
+
+### baseurl
+
+`baseurl` is now empty in `_config.yml`, so a plain `jekyll build` produces
+the same correct output as the Cloudflare build command. It was
+`/stewardship-blog` only because GitHub Pages served this as a project site.
+
+`_config_cloudflare.yml` is therefore redundant, but is kept because the
+Cloudflare dashboard's build command names it — deleting the file would break
+the build. To remove it, change that command to a plain `jekyll build` first.
